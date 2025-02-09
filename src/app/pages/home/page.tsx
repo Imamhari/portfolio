@@ -13,7 +13,8 @@ function Home() {
           height={300}
           alt="profile picture"
           priority
-          className="rounded-[30%] border-4 border-[#090c2c] hover:scale-110 cursor-pointer transition duration-300 ease-in-out border-opacity-70 drop-shadow-2xl"
+          className="rounded-[30%] border-4 border-[#090c2c] hover:scale-110 cursor-pointer transition duration-300 ease-in-out border-opacity-70 shadow-profile
+"
         />
       </div>
     </div>
