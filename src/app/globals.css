@@ -21,4 +21,7 @@ body {
 }
 
 
+.clip-navbar {
+  clip-path: ellipse(80% 100% at 50% 100%);
+}
 

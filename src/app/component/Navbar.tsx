@@ -15,10 +15,9 @@ function Navbar() {
   ]
 
   return (
-    <nav className="sticky p-4 text-white w-full top-0 shadow-sm">
+    <nav  className="sticky p-4 text-white w-full top-0 bg-[#090c2c]">
       <div className="container mx-auto flex justify-between items-center py-3 px-6">
         <div>Logo</div>
-
         {/* Navigation */}
         <ul className="flex space-x-4">
           {navItems.map((item) => (
@@ -40,6 +39,8 @@ function Navbar() {
           ))}
         </ul>
       </div>
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-3 bg-[#e9e9e9] rounded-t-lg"></div>
+
     </nav>
   )
 }
