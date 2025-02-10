@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function ProfilePicture() {
   return (
-    <div>
+    <div className="z-40">
       {/* gambar default */}
       <Image
         src="/profile-light.png"

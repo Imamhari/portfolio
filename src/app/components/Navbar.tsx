@@ -3,6 +3,9 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import DarkModeToggle from "./DarkModeToggle";
 import Image from 'next/image'
+import { Source_Code_Pro } from 'next/font/google';
+
+const sourceCodePro = Source_Code_Pro({ subsets: ['latin'], weight: ['400', '700'] })
 
 function Navbar() {
   const pathname = usePathname();
@@ -37,15 +40,15 @@ function Navbar() {
         </div>
         {/* Navigation */}
         <div className="flex items-center gap-16">
-        <ul className="flex space-x-4">
+        <ul className={`${sourceCodePro.className} flex text-md font-semibold mt-6`}>
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.name}
-                className={`relative px-2 transition duration-300 ${
+                className={`relative px-6 pb-[20px] pt-[10px] transition duration-300 ${
                   pathname === item.path
-                    ? "text-white dark:text-black"
-                    : "text-gray-400 hover:text-white"
+                    ? "text-[#090c2c] dark:text-[#e9e9e9] bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-md"
+                    : "text-[#e9e9e9] dark:text-[#090c2c]  hover:text-orange-600 dark:hover:text-orange-600"
                 }`}
               >
                 {item.name}

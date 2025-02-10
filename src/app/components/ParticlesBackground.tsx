@@ -15,8 +15,8 @@ const ParticlesBackground = () => {
       options={{
         background: { color: "transparent" }, // Pastikan tidak menutupi elemen lain
         particles: {
-          number: { value: 100 },
-          color: { value: ["#ffffff", "#ff0000", "#00ff00", "#0000ff", "#ffff00"] },
+          number: { value: 150 },
+          color: { value: ["#ffffff", "#BC2A8D", "#0A66C2", "#3f4346", "#FB8C00"] },
           links: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
           move: { enable: true, speed: 1 },
           shape: { type: "circle" },
