@@ -7,7 +7,7 @@ function ProfilePicture() {
       {/* gambar default */}
       <Image
         src="/profile-light.png"
-        width={400}
+        width={600}
         height={300}
         alt="profile picture"
         priority
@@ -15,7 +15,7 @@ function ProfilePicture() {
       />
       <Image
         src="/profile-dark.png"
-        width={400}
+        width={600}
         height={300}
         alt="profile picture"
         priority
