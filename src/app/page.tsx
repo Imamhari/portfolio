@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <main>
       <Navbar/>
-      <div className=" bg-[#e9e9e9] mx-2  p-4">
+      <div className=" bg-[#e9e9e9] dark:bg-[#090c2c] mx-2  p-4">
       <Home/>
       <About/>
       <Projects/>

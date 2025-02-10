@@ -7,20 +7,20 @@ function ProfilePicture() {
       {/* gambar default */}
       <Image
         src="/profile-light.png"
-        width={350}
+        width={400}
         height={300}
         alt="profile picture"
         priority
-        // className="block dark:hidden"
+        className="block dark:hidden"
       />
-      {/* <Image
+      <Image
         src="/profile-dark.png"
-        width={300}
+        width={400}
         height={300}
         alt="profile picture"
         priority
         className="hidden dark:block"
-      /> */}
+      />
     </div>
   )
 }
