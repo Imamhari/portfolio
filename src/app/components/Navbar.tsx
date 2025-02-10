@@ -15,7 +15,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="sticky p-4 text-white dark:text-black w-full top-0 bg-[#090c2c] dark:bg-[#e9e9e9]">
+    <nav className="sticky p-4 text-white dark:text-black w-full top-0 bg-[#090c2c] dark:bg-[#e9e9e9] z-50">
       <div className="mx-auto mr-7 flex justify-between items-center py-3 pl-[15vh]">
         <div>
           <Image
