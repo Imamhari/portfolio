@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import DarkModeToggle from "./DarkModeToggle";
+import Image from 'next/image'
 
 function Navbar() {
   const pathname = usePathname();
@@ -16,7 +17,24 @@ function Navbar() {
   return (
     <nav className="sticky p-4 text-white dark:text-black w-full top-0 bg-[#090c2c] dark:bg-[#e9e9e9]">
       <div className="mx-auto mr-7 flex justify-between items-center py-3 pl-[15vh]">
-        <div>Logo</div>
+        <div>
+          <Image
+           src="/logo-light.png"
+           width={60}
+           height={30}
+           alt="profile picture"
+           priority
+           className="block dark:hidden"
+          />
+          <Image
+           src="/logo-dark.png"
+           width={60}
+           height={30}
+           alt="profile picture"
+           priority
+           className="hidden dark:block "
+          />
+        </div>
         {/* Navigation */}
         <div className="flex items-center gap-16">
         <ul className="flex space-x-4">
