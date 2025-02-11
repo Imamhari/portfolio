@@ -39,8 +39,8 @@ export default function Experiences() {
   <h2 className="text-2xl font-bold mb-4 text-center">Experiences</h2>
 
   <div className={`${styles.slider} overflow-hidden relative`}>
-    <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-gray-200/50 via-transparent to-transparent dark:from-[#090c2c]/80  z-10 pointer-events-none" />
-    <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-gray-200/50 via-transparent to-transparent dark:from-[#090c2c]/80 z-10 pointer-events-none" />
+    <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-[#e9e9e9]/100 via-transparent to-transparent dark:from-[#090c2c]/100  z-10 pointer-events-none" />
+    <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#e9e9e9]/100 via-transparent to-transparent dark:from-[#090c2c]/100 z-10 pointer-events-none" />
     <div className={`${styles.slidetrack} relative flex gap-4`}>
       {/* Looping semua experience dalam satu track */}
       {experiences.map((exp, index) => (
