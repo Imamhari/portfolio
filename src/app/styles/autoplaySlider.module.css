@@ -20,7 +20,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-300px * 4)); /* 4 karena setengah dari total */
+    transform: translateX(calc(-300px * 3)); /* 4 karena setengah dari total */
   }
 }
 

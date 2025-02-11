@@ -1,11 +1,13 @@
 import React from "react";
-import Experiences from './../../components/Experiences';
+import Experiences from '@/app/components/Experiences';
+import Education from "@/app/components/Education";
+import GithubContributions from '@/app/components/GithubContributions';
 
 function About() {
   return (
-    <section className="flex p-[70px] pt-[50px] md:mx-[7vh]  text-black dark:text-white flex-col space-y-5 relative ">
+    <section id="about" className="flex p-[70px] pt-[50px] md:mx-[7vh]  text-black dark:text-white flex-col space-y-5 relative ">
       <h1 className="w-full text-center text-[50px] font-bold leading-tight items-center ">
-        About
+        About Me
       </h1>
       <p className="py-7 font-semibold text-md text-justify">
         Hi there!👋🏼 I&apos;m Imam Hari Maulana, I&apos;m currently living in
@@ -23,8 +25,10 @@ function About() {
         drives my desire to contribute meaningfully to innovative and
         technology-driven companies.
       </p>
-      <div>
+      <div className="flex flex-col gap-10">
         <Experiences/>
+        <GithubContributions/>
+        <Education/>
       </div>
     </section>
   );

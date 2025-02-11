@@ -5,7 +5,7 @@ import ParticlesBackground from "@/app/components/ui/ParticlesBackground";
 
 function Home() {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <section id="home" className="relative w-full h-screen overflow-hidden">
     {/* Particles Background */}
     <div className="absolute inset-0 ">
       <ParticlesBackground />
@@ -18,7 +18,7 @@ function Home() {
         <HeroSection />
       </div>
     </div>
-  </div>
+  </section>
   );
 }
 
