@@ -11,8 +11,8 @@
 .slidetrack {
   display: flex;
   gap: 16px; /* Beri jarak antar slide */
-  width: calc(300px * 6); /* Menyesuaikan dengan jumlah card */
-  animation: scroll 30s linear infinite;
+  width: calc(300px * 6 * 2); /* Menyesuaikan dengan jumlah card */
+  animation: scroll 50s linear infinite;
 }
 
 @keyframes scroll {
@@ -20,7 +20,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-300px * 3)); /* 4 karena setengah dari total */
+    transform: translateX(calc(-300px * 6)); /* 4 karena setengah dari total */
   }
 }
 
