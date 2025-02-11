@@ -1,7 +1,7 @@
 import React from "react";
 import ProfilePicture from "@/app/components/ProfilePicture";
 import HeroSection from "@/app/components/HeroSection";
-import ParticlesBackground from "@/app/components/ParticlesBackground";
+import ParticlesBackground from "@/app/components/ui/ParticlesBackground";
 
 function Home() {
   return (
