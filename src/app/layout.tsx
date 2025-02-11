@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portfolio | Imam Hari",
+  icons:"logo-title.png",
   description: "This is my portfolio",
 };
 
