@@ -8,7 +8,7 @@ import DarkModeToggleMobile from "@/app/components/ui/DarkModeToggleMobile";
 function Home() {
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden">
-       <div className="fixed flex justify-end md:hidden w-[560px] z-50">
+       <div className="fixed flex justify-end w-[40vh] items-end md:hidden  z-50">
               <DarkModeToggleMobile  />
               </div>
     {/* Particles Background */}

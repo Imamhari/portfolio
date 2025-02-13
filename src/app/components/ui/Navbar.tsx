@@ -96,13 +96,13 @@ function Navbar() {
       </nav>
 
       {/* navbar bawah */}
-      <nav className="fixed bottom-0 w-full bg-[#090c2c] dark:bg-[#e9e9e9] z-50 md:hidden flex justify-center items-center px-[5vh]">
+      <nav className="fixed bottom-0 w-full h-[70px] bg-[#090c2c] dark:bg-[#e9e9e9] z-50 md:hidden flex justify-center items-center px-[5vh]">
         <ul className="flex justify-between w-[700px]">
         {navItems.map((item) => (
-                <li key={item.name} className="relative w-[70px] h-[60px] z-10">
+                <li key={item.name} className="relative w-[70px] h-[60px] z-10 ">
                   <Link
                     href={item.path}
-                    className={`relative items-center w-[100%] h-[100%] text-center flex justify-center  ${
+                    className={`relative items-center w-[90%] h-[100%] text-center flex justify-center  ${
                       activeSection === item.path
                         ? "text-[#e9e9e9] dark:text-[#090c2c] bg-[#090c2c] dark:bg-[#e9e9e9] rounded-full border-4 border-[#e9e9e9] dark:border-[#090c2c] translate-y-[-35px]"
                         : "text-[#e9e9e9] dark:text-[#090c2c] hover:text-orange-600 dark:hover:text-orange-600"
@@ -111,8 +111,9 @@ function Navbar() {
                     <div className="relative block leading-[75px] text-center duration-[0.5s] text-[1.5em] ">{item.icon}</div>
                   </Link>
                 </li>
+                
               ))}
-             
+            
         </ul>
       </nav>
     </>
@@ -120,3 +121,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+ 
