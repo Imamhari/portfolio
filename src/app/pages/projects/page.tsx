@@ -12,8 +12,9 @@ import {
   TooltipTrigger,
 } from "@/app/components/ui/tooltip";
 import { MoveUpRight, Github } from 'lucide-react';
-import { JetBrains_Mono, Courier_Prime } from 'next/font/google';
+import { Source_Code_Pro, JetBrains_Mono, Courier_Prime } from 'next/font/google';
 
+const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: ["400", "700"] });
 const jetBrainsMono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '700'] });
 const courierPrime = Courier_Prime({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -53,10 +54,11 @@ const projectList = [
 function Projects() {
   const [project, setProject] = useState(projectList[0])
   return (
-    <motion.section id="projects" initial={{opacity:0}} animate={{opacity:1}} className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
+    <motion.section id="projects" initial={{opacity:0}} animate={{opacity:1}} className="min-h-[80vh] md:mx-[15vh] flex flex-col justify-center py-12 xl:px-0">
+      <h1 className={`${sourceCodePro.className} text-4xl font-extrabold text-center mb-10`}>My Projects</h1>
         <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-            <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
+            <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
               <div>
                 {/* outline number */}
                 <div className={`${jetBrainsMono.className} text-8xl font-extrabold text-transparent text-outline`}>{project.num}</div>
@@ -83,7 +85,7 @@ function Projects() {
                         <MoveUpRight className="hover:text-orange-500 transition duration-500"/>
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p className={`${courierPrime.className} border rounded-[5px] py-[2px] px-3 dark:bg-gray-200 bg-gray-500 text-black`}>Live Project</p>
+                        <p className={`${courierPrime.className} border rounded-[5px] py-[2px] px-3 transition duration-500 dark:bg-gray-200 bg-gray-500 text-black`}>Live Project</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -96,7 +98,7 @@ function Projects() {
                         <Github className="hover:text-orange-500 transition duration-500"/>
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p className={`${courierPrime.className} border rounded-[5px] py-[2px] px-3 dark:bg-gray-200 bg-gray-500 text-black`}>Github Repository</p>
+                        <p className={`${courierPrime.className} border rounded-[5px] py-[2px] px-3 transition duration-500 dark:bg-gray-200 bg-gray-500 text-black`}>Github Repository</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
