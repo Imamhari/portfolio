@@ -2,17 +2,21 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import DarkModeToggle from "./DarkModeToggle";
-import Image from 'next/image';
-import { Source_Code_Pro } from 'next/font/google';
+import Image from "next/image";
+import { Source_Code_Pro } from "next/font/google";
+import { House, Users, Briefcase, Code, Mail } from "lucide-react";
 
-const sourceCodePro = Source_Code_Pro({ subsets: ['latin'], weight: ['400', '700'] });
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 const navItems = [
-  { name: "Home", path: "#home" },
-  { name: "About Me", path: "#about" },
-  { name: "Projects", path: "#projects" },
-  { name: "Skills", path: "#skills" },
-  { name: "Contact", path: "#contact" },
+  { name: "Home", icon: <House />, path: "#home" },
+  { name: "About Me", icon: <Users />, path: "#about" },
+  { name: "Projects", icon: <Briefcase />, path: "#projects" },
+  { name: "Skills", icon: <Code />, path: "#skills" },
+  { name: "Contact", icon: <Mail />, path: "#contact" },
 ];
 
 function Navbar() {
@@ -26,7 +30,8 @@ function Navbar() {
       navItems.forEach((item) => {
         const section = document.querySelector(item.path);
         if (section) {
-          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+          const sectionTop =
+            section.getBoundingClientRect().top + window.scrollY;
           const sectionBottom = sectionTop + section.clientHeight;
           if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             currentSection = item.path;
@@ -42,49 +47,75 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky p-4 text-white dark:text-black w-full top-0 bg-[#090c2c] dark:bg-[#e9e9e9] z-50 hidden md:block ">
-      <div className="mx-auto mr-7 flex justify-between items-center py-3 pl-[15vh]">
-        <div>
-          <Image
-            src="/logo-light.png"
-            width={60}
-            height={30}
-            alt="profile picture"
-            priority
-            className="block dark:hidden"
-          />
-          <Image
-            src="/logo-dark.png"
-            width={60}
-            height={30}
-            alt="profile picture"
-            priority
-            className="hidden dark:block"
-          />
+    <>
+      {/* navbar atas  */}
+      <nav className="sticky p-4 text-white dark:text-black w-full top-0 bg-[#090c2c] dark:bg-[#e9e9e9] z-50 hidden md:block ">
+        <div className="mx-auto mr-7 flex justify-between items-center py-3 pl-[15vh]">
+          <div>
+            <Image
+              src="/logo-light.png"
+              width={60}
+              height={30}
+              alt="profile picture"
+              priority
+              className="block dark:hidden"
+            />
+            <Image
+              src="/logo-dark.png"
+              width={60}
+              height={30}
+              alt="profile picture"
+              priority
+              className="hidden dark:block"
+            />
+          </div>
+          {/* Navigation */}
+          <div className="flex items-center gap-16">
+            <ul
+              className={`${sourceCodePro.className} flex text-md font-semibold mt-6`}
+            >
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.path}
+                    className={`relative px-6 pb-[20px] pt-[10px] transition duration-300 ${
+                      activeSection === item.path
+                        ? "text-[#090c2c] dark:text-[#e9e9e9] bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-md"
+                        : "text-[#e9e9e9] dark:text-[#090c2c] hover:text-orange-600 dark:hover:text-orange-600"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <DarkModeToggle />
+          </div>
         </div>
-        {/* Navigation */}
-        <div className="flex items-center gap-16">
-          <ul className={`${sourceCodePro.className} flex text-md font-semibold mt-6`}>
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.path}
-                  className={`relative px-6 pb-[20px] pt-[10px] transition duration-300 ${
-                    activeSection === item.path
-                      ? "text-[#090c2c] dark:text-[#e9e9e9] bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-md"
-                      : "text-[#e9e9e9] dark:text-[#090c2c] hover:text-orange-600 dark:hover:text-orange-600"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <DarkModeToggle />
-        </div>
-      </div>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-3 bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-lg"></div>
-    </nav>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-3 bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-lg"></div>
+      </nav>
+
+      {/* navbar bawah */}
+      <nav className="fixed bottom-0 w-full bg-[#090c2c] dark:bg-[#e9e9e9] z-50 md:hidden flex justify-center items-center px-[5vh]">
+        <ul className="flex justify-between w-[700px]">
+        {navItems.map((item) => (
+                <li key={item.name} className="relative w-[70px] h-[60px] z-10">
+                  <Link
+                    href={item.path}
+                    className={`relative items-center w-[100%] h-[100%] text-center flex justify-center  ${
+                      activeSection === item.path
+                        ? "text-[#e9e9e9] dark:text-[#090c2c] bg-[#090c2c] dark:bg-[#e9e9e9] rounded-full border-4 border-[#e9e9e9] dark:border-[#090c2c] translate-y-[-35px]"
+                        : "text-[#e9e9e9] dark:text-[#090c2c] hover:text-orange-600 dark:hover:text-orange-600"
+                    }`}
+                  >
+                    <div className="relative block leading-[75px] text-center duration-[0.5s] text-[1.5em] ">{item.icon}</div>
+                  </Link>
+                </li>
+              ))}
+             
+        </ul>
+      </nav>
+    </>
   );
 }
 

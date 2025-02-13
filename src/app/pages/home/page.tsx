@@ -2,10 +2,15 @@ import React from "react";
 import ProfilePicture from "@/app/components/ProfilePicture";
 import HeroSection from "@/app/components/HeroSection";
 import ParticlesBackground from "@/app/components/ui/ParticlesBackground";
+import DarkModeToggleMobile from "@/app/components/ui/DarkModeToggleMobile";
+
 
 function Home() {
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden">
+       <div className="fixed flex justify-end md:hidden w-[560px] z-50">
+              <DarkModeToggleMobile  />
+              </div>
     {/* Particles Background */}
     <div className="absolute inset-0 ">
       <ParticlesBackground />
