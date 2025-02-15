@@ -1,22 +1,22 @@
 import React from "react";
 import ProfilePicture from "@/app/components/ProfilePicture";
 import HeroSection from "@/app/components/HeroSection";
-import ParticlesBackground from "@/app/components/ui/ParticlesBackground";
+// import ParticlesBackground from "@/app/components/ui/ParticlesBackground";
 
 
 
 function Home() {
   return (
-    <section id="home" className="relative w-full h-screen overflow-hidden">
+    <section id="home" className="relative w-full h-screen overflow-hidden flex justify-center">
        
     {/* Particles Background */}
-    <div className="absolute inset-0 ">
+    {/* <div className="absolute inset-0 ">
       <ParticlesBackground />
-    </div>
+    </div> */}
 
     {/* Konten Halaman */}
-    <div className="relative z-10 flex flex-col space-y-7">
-      <div className="flex justify-center p-20 gap-8">
+    <div className="relative z-10 flex space-y-7 m-0 xl:m-20">
+      <div className="flex flex-col md:flex-row justify-center  gap-8">
         <ProfilePicture />
         <HeroSection />
       </div>

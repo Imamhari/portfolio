@@ -10,7 +10,7 @@ const courierPrime = Courier_Prime({ subsets: ['latin'], weight: ['400', '700'] 
 const merriWeather = Merriweather({ subsets: ['latin'], weight: ['400', '700'] })
 const HeroSection = () => {
   return (
-    <section className="flex p-[30px] pt-[150px] space-x-5 text-black dark:text-white px-3 relative ">
+    <section className="flex xl:pt-[150px]  space-x-5 text-black dark:text-white px-3 relative ">
   <div className="flex flex-col gap-6 max-w-2xl">
     <h1 className={`${ibmPlexMono.className} text-[50px] font-bold leading-tight`}>
       Hey, I&apos;m <span className="text-orange-500">Imam Hari</span>
@@ -32,8 +32,10 @@ const HeroSection = () => {
     <p className={`${merriWeather.className} text-lg text-black dark:text-white text-justify font-bold`}>
     &quot;I don’t just write code; I build interactive and efficient digital experiences. With a passion for innovation, I create modern, responsive interfaces focused on user comfort and seamless functionality.&quot;
     </p>
+    <div className="flex flex-col space-y-3 items-center md:items-start">
     <SocialMedia/>
     <DownloadCv/>
+    </div>
   </div>
   
 </section>
