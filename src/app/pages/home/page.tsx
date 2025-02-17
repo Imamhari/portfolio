@@ -7,7 +7,7 @@ import HeroSection from "@/app/components/HeroSection";
 
 function Home() {
   return (
-    <section id="home" className="relative w-full h-screen overflow-hidden flex justify-center">
+    <section id="home" className="relative w-full overflow-hidden flex justify-center">
        
     {/* Particles Background */}
     {/* <div className="absolute inset-0 ">

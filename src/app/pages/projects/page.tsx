@@ -100,7 +100,7 @@ function Projects() {
       id="projects"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn"} }}
-      className="min-h-[80vh] md:mx-[15vh] flex flex-col justify-center py-12 xl:px-0 "
+      className="relative md:mx-[15vh] flex flex-col justify-center py-12 xl:px-0 "
     >
       <h1
         className={`${sourceCodePro.className} text-4xl font-extrabold text-center mb-10`}
@@ -110,7 +110,7 @@ function Projects() {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
-            <div className="flex flex-col gap-[20px] h-[50px]">
+            <div className="flex flex-col gap-[20px]">
               {/* outline number */}
               <div
                 className={`${jetBrainsMono.className} text-8xl font-extrabold text-transparent text-outline`}

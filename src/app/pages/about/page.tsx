@@ -8,7 +8,7 @@ import { Source_Code_Pro } from "next/font/google";
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'], weight: ['400', '700'] });
 function About() {
   return (
-    <section id="about" className="flex p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative ">
+    <section id="about" className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative ">
       <h1 className={`${sourceCodePro.className} w-full text-center text-[50px] font-bold leading-tight items-center`}>
         About Me
       </h1>

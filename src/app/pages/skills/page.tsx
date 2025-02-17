@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Skills() {
   return (
-    <section id="skills" className="relative">
+    <section id="skills" className="relative ">
       <div className="m-50 ">
       <Image
         src="/profile-light.png"
