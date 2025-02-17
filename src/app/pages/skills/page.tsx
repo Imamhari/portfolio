@@ -33,9 +33,9 @@ function Skills() {
   );
 
   return (
-    <section id="skills" className="relative">
+    <section id="skills" className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative">
       <h1
-        className={`${sourceCodePro.className} w-full text-center text-[50px] font-bold leading-tight items-center`}
+        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center`}
       >
         Skills
       </h1>

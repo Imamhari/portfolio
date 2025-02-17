@@ -23,8 +23,8 @@ function ProfilePicture() {
           className="hidden dark:block"
         />
       </div>
+      {/* ukuran mobile */}
       <div className="block md:hidden">
-        {/* gambar default */}
         <Image
           src="/profile-light.png"
           width={300}

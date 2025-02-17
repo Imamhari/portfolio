@@ -28,7 +28,7 @@ const ParticlesBackground = () => {
         },
         fullScreen: { enable: false },
       }}
-      className="absolute inset-0 w-full h-full z-10"
+      className="absolute inset-0 w-full h-full z-10 hidden xl:block"
     />
   );
 };

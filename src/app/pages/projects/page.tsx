@@ -89,25 +89,30 @@ const projectList = [
 function Projects() {
   const [project, setProject] = useState(projectList[0]);
 
-  const handleSlideChange = (swiper: { activeIndex: any; }) => {
+  const handleSlideChange = (swiper: { activeIndex: any }) => {
     //get current slide index
     const currentIndex = swiper.activeIndex;
     //update project state based on current project index
     setProject(projectList[currentIndex]);
   };
   return (
-    <motion.section
+    <section
       id="projects"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn"} }}
-      className="relative md:mx-[15vh] flex flex-col justify-center py-12 xl:px-0 "
+      className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative "
     >
       <h1
-        className={`${sourceCodePro.className} text-4xl font-extrabold text-center mb-10`}
+        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center`}
       >
         My Projects
       </h1>
-      <div className="container mx-auto">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        }}
+        className="container mx-auto"
+      >
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
             <div className="flex flex-col gap-[20px]">
@@ -205,21 +210,28 @@ function Projects() {
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
                       <div className="relative w-full h-full">
-                        <Image src={project.image} alt="project image" fill className="object-cover"/>
+                        <Image
+                          src={project.image}
+                          alt="project image"
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                     </div>
                   </SwiperSlide>
                 );
               })}
               {/* slider buttons */}
-              <ProjectSliderButtons 
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" 
-                btnStyles="bg-green-500 text:primary hover:bg-green-500-hover text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" iconStyles="text-white hover:text-orange-500 transition duration-500"/>
+              <ProjectSliderButtons
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-green-500 text:primary hover:bg-green-500-hover text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                iconStyles="text-white hover:text-orange-500 transition duration-500"
+              />
             </Swiper>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }
 
