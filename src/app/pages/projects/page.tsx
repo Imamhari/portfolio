@@ -59,9 +59,9 @@ const projectList = [
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore ad fugiat facere perspiciatis voluptatem, laudantium temporibus nisi laborum odit repudiandae vitae exercitationem consequuntur veniam illo earum? Ad, voluptatem sapiente.",
     stack: [
-      { name: "Next JS" },
-      { name: "Typescript" },
-      { name: "Tailwind CSS" },
+      { name: "Next JS," },
+      { name: "Typescript," },
+      { name: "Tailwind CSS," },
       { name: "ShadCN" },
     ],
     image: "/assets/delish.png",
@@ -76,8 +76,8 @@ const projectList = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore ad fugiat facere perspiciatis voluptatem, laudantium temporibus nisi laborum odit repudiandae vitae exercitationem consequuntur veniam illo earum? Ad, voluptatem sapiente.",
     stack: [
       { name: "Next JS," },
-      { name: "Typescript" },
-      { name: "Tailwind CSS" },
+      { name: "Typescript," },
+      { name: "Tailwind CSS," },
       { name: "ShadCN" },
     ],
     image: "/assets/Sahabat-ajar.png",
@@ -98,7 +98,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative "
+      className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 my-[7vh] relative "
     >
       <h1
         className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center`}

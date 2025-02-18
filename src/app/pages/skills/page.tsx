@@ -1,49 +1,32 @@
 import React from "react";
-import { IconCloud } from "@/app/components/magicui/icon-cloud";
 import { Source_Code_Pro } from "next/font/google";
+
+
+
+
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
-const slugs = [
-  "html5",
-  "css3",
-  "javascript",
-  "typescript",
-  "react",
-  "nextjs",
-  "tailwind",
-  "git",
-  "github",
-  "vercel",
-  "netlify",
-  "python",
-  "flask",
-  "mysql",
-  "mongodb",
-  "nodejs",
-  "docker",
-];
 
 function Skills() {
-  const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  );
+  
 
   return (
-    <section id="skills" className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative">
+    <section id="skills" className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col mb-0 xl:mb-10 space-y-5 relative">
       <h1
-        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center`}
+        className={`${sourceCodePro.className} w-full text-start text-[50px] mb-20 font-bold leading-tight items-center`}
       >
         Skills
       </h1>
-      <div className="flex flex-col xl:flex-row justify-center gap-20 items-center p-12">
-        <div className="scale-150 xl:scale-[200%]">
-          <IconCloud images={images}/>
+      <div className="flex flex-col xl:flex-row justify-between gap-20 items-center p-12">
+      <h3>hsjdnajsi</h3>
+        <div className="scale-150">
+          
         </div>
-        <h3>hsjdnajsi</h3>
+        
       </div>
     </section>
   );
