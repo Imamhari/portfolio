@@ -1,4 +1,6 @@
-import { Award, CircleCheckBig, Handshake } from "lucide-react";
+import { RiAwardFill } from "react-icons/ri";
+import { BsCheck2Circle } from "react-icons/bs";
+import { LuHandshake } from "react-icons/lu";
 
 import {
   Source_Code_Pro,
@@ -16,17 +18,17 @@ const courierPrime = Courier_Prime({
 });
 const stats = [
   {
-    icon: <Award className="w-12 h-12 text-white bg-orange-500 rounded-full p-1"/>,
+    icon: <RiAwardFill className="w-12 h-12 text-white bg-orange-500 rounded-full p-1"/>,
     number: "-1",
     label: "Years of Experience",
   },
   {
-    icon: <CircleCheckBig className="w-12 h-12 text-white bg-orange-500 rounded-full p-1"/>,
+    icon: <BsCheck2Circle className="w-12 h-12 text-white bg-orange-500 rounded-full p-1"/>,
     number: "3+",
     label: "Projects Completed",
   },
   {
-    icon: <Handshake className="w-12 h-12 text-white bg-orange-500 rounded-full p-1"/>,
+    icon: <LuHandshake className="w-12 h-12 text-white bg-orange-500 rounded-full p-1"/>,
     number: "3+",
     label: "Projects Collaborated",
   },

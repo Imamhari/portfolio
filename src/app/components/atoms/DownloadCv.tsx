@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { FaDownload } from "react-icons/fa6";
 
 function DownloadCv() {
   return (
@@ -13,7 +13,7 @@ function DownloadCv() {
         className="text-sm font-medium text-[#e9e9e9] hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-500 flex justify-center gap-3"
       >
         Download CV
-        <Download size={20} className="ml-1" />
+        <FaDownload size={20} className="ml-1" />
       </a>
     </button>
   );

@@ -11,7 +11,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/app/components/ui/tooltip";
-import { MoveUpRight, Github } from "lucide-react";
+import { IoLogoGithub } from "react-icons/io";
+import { LuMoveUpRight } from "react-icons/lu";
 import {
   Source_Code_Pro,
   JetBrains_Mono,
@@ -159,7 +160,7 @@ function Projects() {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[40px] h-[40px] dark:bg-gray-700 bg-gray-400 rounded-full flex justify-center  items-center group">
-                        <MoveUpRight className="hover:text-orange-500 transition duration-500" />
+                        <LuMoveUpRight className="hover:text-orange-500 transition duration-500" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p
@@ -180,7 +181,7 @@ function Projects() {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[40px] h-[40px] dark:bg-gray-700 bg-gray-400 rounded-full flex justify-center  items-center group mt-[2px]">
-                        <Github className="hover:text-orange-500 transition duration-500" />
+                        <IoLogoGithub  className="hover:text-orange-500 transition duration-500" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p

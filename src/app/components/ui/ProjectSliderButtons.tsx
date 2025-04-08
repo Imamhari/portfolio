@@ -1,7 +1,7 @@
 "use client";
 
 import { useSwiper } from "swiper/react";
-import { ArrowBigRightDash, ArrowBigLeftDash } from "lucide-react";
+import { TbArrowBigRightLine, TbArrowBigLeftLine } from "react-icons/tb";
 
 function ProjectSliderButtons({ containerStyles, btnStyles, iconStyles }: {
   containerStyles: string;
@@ -11,10 +11,10 @@ function ProjectSliderButtons({ containerStyles, btnStyles, iconStyles }: {
   return (
     <div className={containerStyles}>
       <button className={btnStyles}>
-        <ArrowBigLeftDash className={iconStyles} onClick={() => swiper.slidePrev() }/>
+        <TbArrowBigLeftLine className={iconStyles} onClick={() => swiper.slidePrev() }/>
       </button>
       <button className={btnStyles}>
-        <ArrowBigRightDash className={iconStyles} onClick={() => swiper.slideNext() }/>
+        <TbArrowBigRightLine className={iconStyles} onClick={() => swiper.slideNext() }/>
       </button>
     </div>
   );

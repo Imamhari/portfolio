@@ -4,7 +4,9 @@ import Link from "next/link";
 import DarkModeToggle from "./ui/DarkModeToggle";
 import Image from "next/image";
 import { Source_Code_Pro } from "next/font/google";
-import { House, Users, Briefcase, Code, Mail } from "lucide-react";
+import { FaHouseChimney } from "react-icons/fa6";
+import { FaRegUser, FaBriefcase, FaCode } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -12,11 +14,11 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 const navItems = [
-  { name: "Home", icon: <House />, path: "#home" },
-  { name: "About Me", icon: <Users />, path: "#about" },
-  { name: "Projects", icon: <Briefcase />, path: "#projects" },
-  { name: "Skills", icon: <Code />, path: "#skills" },
-  { name: "Contact", icon: <Mail />, path: "#contact" },
+  { name: "Home", icon: <FaHouseChimney />, path: "#home" },
+  { name: "About Me", icon: <FaRegUser />, path: "#about" },
+  { name: "Projects", icon: <FaBriefcase />, path: "#projects" },
+  { name: "Skills", icon: <FaCode />, path: "#skills" },
+  { name: "Contact", icon: <IoMdMail />, path: "#contact" },
 ];
 
 function Navbar() {

@@ -1,7 +1,8 @@
 "use client";
 
 import { useDarkMode } from "@/hooks/useDarkMode";
-import { Sun, Moon } from "lucide-react";
+import { CiSun } from "react-icons/ci";
+import { IoMoonSharp } from "react-icons/io5";
 
 export default function DarkModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -16,7 +17,7 @@ export default function DarkModeToggle() {
           isDarkMode ? "translate-x-6" : "translate-x-0"
         }`}
       >
-        {isDarkMode ? <Moon size={14} /> : <Sun size={14} />}
+        {isDarkMode ? <IoMoonSharp size={14} /> : <CiSun size={14} />}
       </div>
     </button>
   );

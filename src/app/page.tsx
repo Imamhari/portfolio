@@ -3,6 +3,7 @@ import DarkModeToggleMobile from "./components/ui/DarkModeToggleMobile";
 import About from "./pages/about/page";
 import Home from "./pages/home/page";
 import Projects from "./pages/projects/page";
+import Skills from "./pages/skills/page";
 
 export default function Page() {
   return (
@@ -15,7 +16,7 @@ export default function Page() {
         <Home />
         <About />
         <Projects />
-        {/* <Skills /> */}
+        <Skills />
         {/* <Contact /> */}
       </div>
     </main>
