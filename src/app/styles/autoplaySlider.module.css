@@ -1,0 +1,64 @@
+.slider {
+  height: 180px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.slidetrack {
+  display: flex;
+  gap: 16px; /* Beri jarak antar slide */
+  width: calc(300px * 6 * 2); /* Menyesuaikan dengan jumlah card */
+  animation: scroll 50s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 6)); /* 4 karena setengah dari total */
+  }
+}
+
+.slidetrack:hover{
+  animation-play-state: paused;
+}
+
+.slide {
+  width: 500px; /* Atur ukuran agar seragam */
+  height: 150px;
+  flex-shrink: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+}
+
+.slider::before,
+.slider::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 10%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+ 
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+

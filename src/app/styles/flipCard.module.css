@@ -1,0 +1,95 @@
+.wrapper{
+  perspective: 3000px;
+}
+
+.card{
+  width: 250px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.2), -5px -5px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+
+.frontpage,
+.backpage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.cardinfo{
+  position: absolute;
+  bottom: 50px;
+  left: 45px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cardtitle{
+  font-style: 2rem;
+  font-weight: bold;
+}
+
+.cardsubtitle{
+  font-style: 1.5rem;
+  margin-top: 5px;
+  color: blue;
+}
+
+.backpage{
+  background-color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.cardcontent{
+  text-align: center;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.cardcontent h3{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.carddescription{
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cardbutton{
+  background-color: aquamarine;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cardbutton:hover{
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
