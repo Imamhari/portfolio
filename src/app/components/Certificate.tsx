@@ -13,10 +13,6 @@ const pdfFiles: PdfFile[] = [
     title: "Full-stack Software Engineer - RevoU",
   },
   {
-    id: "1J0uOJB5F2HB_cQdC3EoQEA9SMRE82t_O",
-    title: "Certificate of Excellence Software Engineer - RevoU",
-  },
-  {
     id: "1tFBb7n2h7aZnHLUcyj0BeoMiVQsq-DqD",
     title: "Belajar Dasar Pemrograman Web - Dicoding",
   },
@@ -24,7 +20,12 @@ const pdfFiles: PdfFile[] = [
     id: "1J0uOJB5F2HB_cQdC3EoQEA9SMRE82t_O",
     title: "Certificate of Excellence Software Engineer - RevoU",
   },
+  {
+    id: "1gb0Q1FY0LgvW4QnDjL1eURRVOeECEfQB",
+    title: "Tech Talk 4.0: The Future of AI in Web Development - GDSC Widyatama",
+  },
 ];
+
 
 export default function Certificate() {
   const [showAll, setShowAll] = useState(false);
