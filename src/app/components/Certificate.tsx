@@ -24,17 +24,25 @@ const pdfFiles: PdfFile[] = [
     id: "1gb0Q1FY0LgvW4QnDjL1eURRVOeECEfQB",
     title: "Tech Talk 4.0: The Future of AI in Web Development - GDSC Widyatama",
   },
+  {
+    id: "1hffi_rKN4Q7rpp-bx2snaEO2m1zJH2Rk",
+    title: "Pengenalan Pemrograman - Codepolitan",
+  },
+  {
+    id: "12e46mxTXJLAZyJWqQhPfjxXfzw__shWL",
+    title: "Front End Basic - Codepolitan",
+  },
+ 
 ];
-
 
 export default function Certificate() {
   const [showAll, setShowAll] = useState(false);
-  const Certificates = showAll ? pdfFiles : pdfFiles.slice(0, 2);
+  const Certificates = showAll ? pdfFiles : pdfFiles.slice(0, 3);
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold mb-6 text-center">My Certificates</h2>
+    <div className="w-full  md:max-w-3xl xl:max-w-5xl mx-0 xl:mx-auto mt-20  py-8">
+      {/* <h2 className="text-2xl font-bold mb-6 text-center">My Certificates</h2> */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {Certificates.map((pdf, index) => (
           <div
             key={index}

@@ -22,7 +22,7 @@ const stats = [
   },
   {
     icon: <CircleCheckBig className="w-12 h-12 text-white bg-orange-500 rounded-full p-1"/>,
-    number: "5+",
+    number: "3+",
     label: "Projects Completed",
   },
   {
