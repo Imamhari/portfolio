@@ -17,8 +17,8 @@ const pdfFiles: PdfFile[] = [
     title: "Certificate of Excellence Software Engineer - RevoU",
   },
   {
-    id: "1X1qxtwOK3oYUYEe-k48oue4anHaheqVN",
-    title: "Full-stack Software Engineer - RevoU",
+    id: "1tFBb7n2h7aZnHLUcyj0BeoMiVQsq-DqD",
+    title: "Belajar Dasar Pemrograman Web - Dicoding",
   },
   {
     id: "1J0uOJB5F2HB_cQdC3EoQEA9SMRE82t_O",

@@ -21,14 +21,14 @@ function About() {
   return (
     <section
       id="about"
-      className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative "
+      className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative mx-2 "
     >
       <h1
-        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center`}
+        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center `}
       >
         About Me
       </h1>
-      <p className="py-7 font-semibold text-md text-justify">
+      <p className="py-7 font-semibold text-sm xl:text-xl text-justify">
         Hi there!👋🏼 I&apos;m Imam Hari Maulana, I&apos;m currently living in
         Bekasi, Indonesia. I am a software engineer with a solid foundation in
         problem-solving, attention to detail, and a high commitment to
