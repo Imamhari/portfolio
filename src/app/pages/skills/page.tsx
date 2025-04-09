@@ -42,7 +42,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:mx-[7vh] relative mx-2 h-screen text-black dark:text-white"
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px]  md:mx-[7vh] relative mx-2 h-full text-black dark:text-white"
     >
       <h1
         className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight`}

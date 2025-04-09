@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import DarkModeToggleMobile from "./components/ui/DarkModeToggleMobile";
 import About from "./pages/about/page";
+import Contact from "./pages/contact/page";
 import Home from "./pages/home/page";
 import Projects from "./pages/projects/page";
 import Skills from "./pages/skills/page";
@@ -17,7 +18,7 @@ export default function Page() {
         <About />
         <Projects />
         <Skills />
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </main>
   );

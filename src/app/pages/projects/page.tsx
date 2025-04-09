@@ -99,7 +99,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 my-[7vh] relative "
+      className="flex p-0 md:p-[70px] pt-[50px] h-screen md:mx-[7vh] text-black justify-center dark:text-white flex-col space-y-5 my-[7vh] relative "
     >
       <h1
         className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center`}
