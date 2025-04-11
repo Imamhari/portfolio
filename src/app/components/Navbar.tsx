@@ -51,7 +51,7 @@ function Navbar() {
   return (
     <>
       {/* navbar atas  */}
-      <nav className="sticky p-4 text-white dark:text-black w-full top-0 bg-[#090c2c] dark:bg-[#e9e9e9] z-50 hidden md:block ">
+      <nav className="sticky p-4 text-white dark:text-black w-full top-0 bg-[#090c2c] dark:bg-[#e9e9e9] z-50 hidden md:block  ">
         <div className="mx-auto mr-7 flex justify-between items-center py-2 pl-[15vh]">
           <div>
             <Image
@@ -94,7 +94,7 @@ function Navbar() {
             <DarkModeToggle />
           </div>
         </div>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-3 bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-lg"></div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-3 bg-[#e9e9e9] dark:bg-[#090c2c]  rounded-t-lg"></div>
       </nav>
 
       {/* navbar bawah */}
