@@ -42,55 +42,65 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px]  md:mx-[7vh] relative mx-2 h-full text-black dark:text-white"
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white "
     >
-      <h1
-        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight`}
-      >
-        Skills
-      </h1>
+      <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full min-h-[60vh]">
+        <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-[20px]">
+          <h1 className="text-lg tracking-widest rotate-[-90deg] text-gray-300">
+            SKILLS
+          </h1>
+          <div className="w-px h-36 bg-gray-400 mt-6"></div>
+        </div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 items-start justify-center w-full mt-10 xl:mx-5 gap-10">
+          <div>
+            <h3
+              className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}
+            >
+              Tech stack that delivers <br /> results with style.
+            </h3>
+            <p className={`${sourceCodePro.className} w-full text-start  font-normal leading-tight items-center justify-center mt-5`}>
+              As a growing developer, I have acquired a solid foundation in core
+              web development technologies. With a strong passion for learning,
+              I continuously strive to deepen my skills and expand my knowledge
+              in this field.
+            </p>
 
-      <div className="grid grid-cols-1 xl:grid-cols-2 items-start justify-center w-full mt-10 xl:mx-5 gap-10">
-        <div>
-          <p className={courierPrime.className}>
-            As a growing developer, I have acquired a solid foundation in core
-            web development technologies. With a strong passion for learning, I
-            continuously strive to deepen my skills and expand my knowledge in
-            this field.
-          </p>
+            {/* Tabs Section */}
+            <div
+              ref={containerRef}
+              className="flex flex-col items-start w-full mt-10"
+            >
+              <div className="relative flex bg-white rounded-2xl gap-2 p-1">
+                {/* Indicator */}
+                <div
+                  className="absolute top-1 bottom-1 left-0 rounded-2xl bg-orange-400 transition-all duration-300"
+                  style={indicatorStyle}
+                />
 
-          {/* Tabs Section */}
-          <div ref={containerRef} className="flex flex-col items-start w-full mt-10">
-            <div className="relative flex bg-white rounded-2xl gap-2 p-1">
-              {/* Indicator */}
-              <div
-                className="absolute top-1 bottom-1 left-0 rounded-2xl bg-orange-400 transition-all duration-300"
-                style={indicatorStyle}
-              />
-
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  data-id={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300
-                    ${
-                      activeTab === tab.id
-                        ? "text-white"
-                        : "text-black hover:text-orange-500/50"
-                    }
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    data-id={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300
+                  ${
+                    activeTab === tab.id
+                      ? "text-white"
+                      : "text-black hover:text-orange-500/50"
+                  }
                   `}
-                >
-                  {tab.label}
-                </button>
-              ))}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          {activeTab === "skills" && <Skill />}
-          {activeTab === "tools" && <Tools />}
+          <div>
+            {activeTab === "skills" && <Skill />}
+            {activeTab === "tools" && <Tools />}
+          </div>
         </div>
       </div>
     </section>
