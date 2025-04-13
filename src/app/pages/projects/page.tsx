@@ -118,7 +118,7 @@ function Projects() {
           </div>
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
             <h3
-              className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}
+              className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px]`}
             >
               Where ideas become interactive.
             </h3>
