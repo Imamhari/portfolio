@@ -47,11 +47,11 @@ function Skills() {
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full min-h-[60vh]">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-[20px]">
           <h1 className="text-lg tracking-widest rotate-[-90deg] text-gray-300">
-            SKILLS
+            SKILLS.
           </h1>
           <div className="w-px h-36 bg-gray-400 mt-6"></div>
         </div>
-        <div className="grid grid-cols-1 xl:grid-cols-2 items-start justify-center w-full mt-10 xl:mx-5 gap-10">
+        <div className="grid grid-cols-1 xl:grid-cols-2 items-start justify-center w-full  xl:mx-5 gap-10">
           <div>
             <h3
               className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}

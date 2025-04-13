@@ -47,3 +47,13 @@ body {
     -webkit-text-stroke: 3px rgb(255, 152, 0);
   }
 }
+
+
+.writing-vertical {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: rotate(0.75turn) translateX(-100%);
+  transform-origin: left top;
+  margin-bottom: 0px;
+}

@@ -42,26 +42,39 @@ function About() {
   return (
     <section
       id="about"
-      className="flex p-0 md:p-[70px] pt-[50px] md:mx-[7vh] text-black dark:text-white flex-col space-y-5 relative mx-2 "
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white "
     >
-      <h1
-        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center `}
-      >
-        About Me
-      </h1>
-      <h3 className={`${courierPrime.className} py-7 text-sm xl:text-xl text-justify xl:mx-5`}>
-        Hi there! 👋🏼 I'm Imam Hari Maulana, a Front End Developer based in
-        Bekasi, Indonesia. I specialize in building responsive and user-friendly
-        web interfaces using JavaScript, TypeScript, React JS, Next JS, and
-        Tailwind CSS. With less than a year of experience, I bring strong
-        problem-solving skills, attention to detail, and a passion for crafting
-        clean, efficient code. After completing intensive training at RevoU,
-        I’ve worked on various projects that focus on delivering great user
-        experiences. I'm driven by user-centered design and always eager to
-        learn and grow in a collaborative environment. Currently open to new
-        opportunities in front-end development and excited to contribute to
-        innovative, tech-driven teams.
-      </h3>
+      <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full">
+        <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-10">
+          <h1 className="text-lg tracking-widest rotate-[-90deg] text-gray-300">
+            ABOUT.
+          </h1>
+          <div className="w-px h-36 bg-gray-400 mt-6"></div>
+        </div>
+        <div>
+        <h3
+          className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}
+        >
+          Crafting not just websites, but first impressions.
+        </h3>
+
+        <p
+          className={`${courierPrime.className} py-7 text-sm xl:text-xl text-justify xl:mx-5`}
+        >
+          Hi there! 👋🏼 I'm Imam Hari Maulana, a Front End Developer based in
+          Bekasi, Indonesia. I specialize in building responsive and
+          user-friendly web interfaces using JavaScript, TypeScript, React JS,
+          Next JS, and Tailwind CSS. With less than a year of experience, I
+          bring strong problem-solving skills, attention to detail, and a
+          passion for crafting clean, efficient code. After completing intensive
+          training at RevoU, I’ve worked on various projects that focus on
+          delivering great user experiences. I'm driven by user-centered design
+          and always eager to learn and grow in a collaborative environment.
+          Currently open to new opportunities in front-end development and
+          excited to contribute to innovative, tech-driven teams.
+        </p>
+        </div>
+      </div>
 
       {/* TabsSection */}
       <div className="flex flex-col items-center justify-center w-full mt-10">

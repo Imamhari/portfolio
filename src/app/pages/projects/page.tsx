@@ -99,24 +99,30 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex p-0 md:p-[70px] pt-[50px] h-screen md:mx-[7vh] text-black justify-center dark:text-white flex-col space-y-5 my-[7vh] relative "
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[50px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white mt-10 mr-5"
     >
-      <h1
-        className={`${sourceCodePro.className} w-full text-start text-[50px] font-bold leading-tight items-center`}
-      >
-        My Projects
-      </h1>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
           transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
         }}
-        className="container mx-auto"
+        className="container w-full"
       >
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+        <div className="flex flex-col xl:flex-row ">
+          <div className="relative hidden md:flex flex-col justify-start items-center gap-[60px] pt-10">
+            <h1 className="text-lg tracking-widest rotate-[-90deg] text-gray-300">
+              PROJECTS.
+            </h1>
+            <div className="w-px h-36 bg-gray-400 pt-3"></div>
+          </div>
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
-            <div className="flex flex-col gap-[20px]">
+            <h3
+              className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}
+            >
+              Where ideas become interactive.
+            </h3>
+            <div className="flex flex-col gap-[20px] pr-[30px]">
               {/* outline number */}
               <div
                 className={`${jetBrainsMono.className} text-8xl font-extrabold text-transparent text-outline`}
@@ -181,7 +187,7 @@ function Projects() {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[40px] h-[40px] dark:bg-gray-700 bg-gray-400 rounded-full flex justify-center  items-center group mt-[2px]">
-                        <IoLogoGithub  className="hover:text-orange-500 transition duration-500" />
+                        <IoLogoGithub className="hover:text-orange-500 transition duration-500" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p
