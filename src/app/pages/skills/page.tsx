@@ -42,7 +42,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 text-black dark:text-white h-screen justify-center "
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 text-black dark:text-white justify-center mt-20"
     >
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full min-h-[60vh]">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-[20px]">
