@@ -51,14 +51,17 @@ function Skills() {
           </h1>
           <div className="w-px h-36 bg-gray-400 mt-6"></div>
         </div>
-        <div className="grid grid-cols-1 xl:grid-cols-2 items-start justify-center w-full  xl:mx-5 gap-10">
+        <div className="grid grid-cols-1 xl:grid-cols-2 items- justify-center w-full  xl:mx-5 gap-10">
           <div>
+          <h1 className="text-lg block md:hidden tracking-widest text-gray-300">
+            MY SKILLS. <hr className="w-[20vh]" />
+          </h1>
             <h3
-              className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}
+              className={`${courierPrime.className} w-full hidden md:block font-bold leading-tight text-[30px] z-50`}
             >
               Tech stack that delivers <br /> results with style.
             </h3>
-            <p className={`${sourceCodePro.className} w-full text-start  font-normal leading-tight items-center justify-center mt-5`}>
+            <p className={`${sourceCodePro.className} w-full font-normal leading-tight text-justify items-center justify-center mt-5`}>
               As a growing developer, I have acquired a solid foundation in core
               web development technologies. With a strong passion for learning,
               I continuously strive to deepen my skills and expand my knowledge
@@ -68,7 +71,7 @@ function Skills() {
             {/* Tabs Section */}
             <div
               ref={containerRef}
-              className="flex flex-col items-start w-full mt-10"
+              className="flex flex-col items-center md:items-start w-full mt-10"
             >
               <div className="relative flex bg-white rounded-2xl gap-2 p-1">
                 {/* Indicator */}
@@ -96,11 +99,11 @@ function Skills() {
               </div>
             </div>
           </div>
-
-          <div>
+          <div className="mt-10]">
             {activeTab === "skills" && <Skill />}
             {activeTab === "tools" && <Tools />}
           </div>
+
         </div>
       </div>
     </section>

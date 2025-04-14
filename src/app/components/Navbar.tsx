@@ -55,7 +55,7 @@ function Navbar() {
         <div className="mx-auto mr-7 flex justify-between items-center py-2 pl-[15vh]">
           <div className="hidden xl:block">
             <Image
-              src="/logo-light.png"
+              src="/logo-light.webp"
               width={60}
               height={30}
               alt="profile picture"
@@ -63,7 +63,7 @@ function Navbar() {
               className="block dark:hidden"
             />
             <Image
-              src="/logo-dark.png"
+              src="/logo-dark.webp"
               width={60}
               height={30}
               alt="profile picture"
@@ -100,7 +100,7 @@ function Navbar() {
       </nav>
 
       {/* navbar bawah */}
-      <nav className="fixed bottom-0 w-full h-[70px] bg-[#090c2c] dark:bg-[#e9e9e9] z-50 md:hidden flex justify-center items-center px-[5vh]">
+      <nav className="fixed bottom-0 w-full h-[70px] bg-[#090c2c] dark:bg-[#e9e9e9] z-50 md:hidden flex justify-center items-center px-[5vh] ">
         <ul className="flex justify-between w-[700px]">
           {navItems.map((item) => (
             <li key={item.name} className="relative w-[70px] h-[60px] z-10 ">

@@ -110,14 +110,14 @@ function Projects() {
         className="container w-full"
       >
         <div className="flex flex-col xl:flex-row ">
-          <div className="relative hidden md:flex flex-col justify-start items-center gap-[60px] pt-10">
+          <div className="relative hidden xl:flex flex-col justify-start items-center gap-[60px] pt-10">
             <h1 className="text-lg tracking-widest rotate-[-90deg] text-gray-300">
               PROJECTS.
             </h1>
             <div className="w-px h-36 bg-gray-400 pt-3"></div>
           </div>
-            <h1 className="text-lg block md:hidden tracking-widest text-gray-300 mb-10">
-              RECENT PROJECTS. <hr className="mr-[30vh]" />
+            <h1 className="text-lg block xl:hidden tracking-widest text-gray-300 mb-10">
+              RECENT PROJECTS. <hr className="w-[30vh]" />
             </h1>
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
             <h3

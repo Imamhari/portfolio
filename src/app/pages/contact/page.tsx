@@ -41,7 +41,7 @@ function Contact() {
 
         <div className="grid grid-cols-2 items-start md:pb-[10vh] h-full">
           <div className="flex flex-col items-center justify-center ">
-            <h3 className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}>Available for work, collaborations, <br /> or just a friendly hello.</h3>
+            <h3 className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-30`}>Available for work, collaborations, <br /> or just a friendly hello.</h3>
             <p
               className={`${sourceCodePro.className} w-full text-start  font-normal leading-tight items-center justify-center mt-5`}
             >
@@ -49,7 +49,7 @@ function Contact() {
               opportunities to be part of your visions.
             </p>
             <div
-              className={`${sourceCodePro.className} w-full  font-bold leading-tight flex flex-col items-start mt-10 space-y-10 z-50`}
+              className={`${sourceCodePro.className} w-full  font-bold leading-tight flex flex-col items-start mt-10 space-y-10 z-30`}
             >
               <div className="flex ">
                 <SiGmail
@@ -57,7 +57,7 @@ function Contact() {
                   className="inline-block mr-2 dark:bg-white p-1 dark:text-black bg-black text-white  rounded-lg"
                 />
                 <div className="space-y-2">
-                  <span className="  z-50 p-1 ">Email:</span>
+                  <span className="  z-30 p-1 ">Email:</span>
                   <p className="text-gray-600 dark:text-gray-400">
                     imamhari247@gmail.com
                   </p>
@@ -69,7 +69,7 @@ function Contact() {
                   className="inline-block mr-2 dark:bg-white p-1 dark:text-black bg-black text-white  rounded-lg"
                 />
                 <div className="space-y-2">
-                  <span className="  z-50 p-1 ">Whatsapp:</span>
+                  <span className="  z-30 p-1 ">Whatsapp:</span>
                   <p className="text-gray-600 dark:text-gray-400">
                     +62 812-1167-6558
                   </p>
@@ -81,7 +81,7 @@ function Contact() {
                   className="inline-block mr-2 dark:bg-white p-1 dark:text-black bg-black text-white  rounded-lg"
                 />
                 <div className="space-y-2">
-                  <span className="z-50 p-1 ">Address:</span>
+                  <span className="z-30 p-1 ">Address:</span>
                   <p className="text-gray-600 dark:text-gray-400">
                     Bekasi, Indonesia
                   </p>
@@ -111,8 +111,8 @@ function Contact() {
                   />
                   <svg
                     viewBox="0 0 300 100"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
                     preserveAspectRatio="none"
                     style={{
@@ -139,8 +139,8 @@ function Contact() {
 
                   <svg
                     viewBox="0 0 300 100"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
                     preserveAspectRatio="none"
                     style={{
@@ -165,8 +165,8 @@ function Contact() {
                   />
                   <svg
                     viewBox="0 0 300 100"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
                     preserveAspectRatio="none"
                     style={{
@@ -191,8 +191,8 @@ function Contact() {
                   ></textarea>{" "}
                   <svg
                     viewBox="0 0 300 100"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
                     preserveAspectRatio="none"
                     style={{
@@ -209,7 +209,7 @@ function Contact() {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-50"
+                className="flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30"
               >
                 <RiMailSendFill size={30} />
                 <span>SEND</span>
