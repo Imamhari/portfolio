@@ -20,9 +20,8 @@ const merriWeather = Merriweather({
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col xl:pt-[150px] px-5 md:px-10 xl:px-0 text-black dark:text-white relative">
-      <div className="flex flex-col gap-6 xl:max-w-2xl w-full mx-auto md:justify-center md:items-center xl:items-start">
-        
+    <div className="flex flex-col xl:pt-[150px] px-5 md:px-10 xl:px-0 text-black dark:text-white relative lg:mr-[10vh]">
+      <div className="flex flex-col gap-6 xl:max-w-2xl w-full mx-auto  md:justify-center md:items-center xl:items-start">
           <h1
             className={`${ibmPlexMono.className} text-4xl md:text-5xl  font-bold leading-tight text-center md:text-left`}
           >

@@ -13,8 +13,8 @@ function Home() {
 
       {/* Konten Halaman */}
      
-        <div className="flex justify-between flex-wrap">
-          <div className=" w-full h-screen xl:w-[95vh] items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-screen relative">
+          <div className=" w-full h-screen xl:w-auto items-center">
             <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
           </div>
             <div>
