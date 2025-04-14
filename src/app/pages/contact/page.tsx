@@ -24,7 +24,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 text-black dark:text-white "
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 text-black dark:text-white scroll-mt-24"
     >
       <div className="absolute left-0 top-0 right-0 bottom-0 w-full h-full ">
         <Threads amplitude={0.6} distance={1.4} enableMouseInteraction={true} />
