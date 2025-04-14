@@ -14,7 +14,7 @@ const geistMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Portfolio | Imam Hari",
-  icons:"logo-title.png",
+  icons:"logo-title.webp",
   description: "This is my portfolio",
 };
 

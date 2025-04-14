@@ -42,7 +42,7 @@ function About() {
   return (
     <section
       id="about"
-      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white "
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white mt-20"
     >
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-10">
@@ -52,8 +52,11 @@ function About() {
           <div className="w-px h-36 bg-gray-400 mt-6"></div>
         </div>
         <div>
+        <h1 className="text-lg block md:hidden tracking-widest text-gray-300">
+            ABOUT. <hr className="w-24" />
+          </h1>
         <h3
-          className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px] z-50`}
+          className={`${courierPrime.className} w-full hidden md:block  font-bold leading-tight text-[30px] z-50`}
         >
           Crafting not just websites, but first impressions.
         </h3>
