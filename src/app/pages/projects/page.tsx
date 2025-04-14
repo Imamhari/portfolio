@@ -123,13 +123,13 @@ function Projects() {
       >
         <div className="flex flex-col xl:flex-row ">
           <div className="relative hidden xl:flex flex-col justify-start items-center gap-[60px] pt-10">
-            <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] text-gray-300`}>
+            <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] `}>
               PROJECTS.
             </h1>
-            <div className="w-px h-36 bg-gray-400 pt-3"></div>
+            <div className="w-px h-36 bg-gray-900 dark:bg-gray-400 pt-3"></div>
           </div>
-            <h1 className={`${sourceCodePro.className} text-lg block xl:hidden tracking-widest text-gray-300 mb-10`}>
-              RECENT PROJECTS. <hr className="w-[30vh]" />
+            <h1 className={`${sourceCodePro.className} text-lg block xl:hidden tracking-widest  mb-10`}>
+              RECENT PROJECTS. <hr className="w-[30vh] h-1 bg-gray-900 dark:bg-gray-400" />
             </h1>
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
             <h3

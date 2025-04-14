@@ -46,14 +46,14 @@ function About() {
     >
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-10">
-          <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] text-gray-300`}>
+          <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] `}>
             ABOUT.
           </h1>
-          <div className="w-px h-36 bg-gray-400 mt-6"></div>
+          <div className="w-px h-36 bg-gray-900 dark:bg-gray-400 mt-6"></div>
         </div>
         <div>
-        <h1 className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest text-gray-300`}>
-            ABOUT. <hr className="w-24" />
+        <h1 className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest`}>
+            ABOUT. <hr className="w-24 h-1 bg-gray-900 dark:bg-gray-400" />
           </h1>
         <h3
           className={`${courierPrime.className} w-full hidden md:block  font-bold leading-tight text-[30px] z-50`}

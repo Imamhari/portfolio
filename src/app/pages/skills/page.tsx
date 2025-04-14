@@ -46,15 +46,15 @@ function Skills() {
     >
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full min-h-[60vh]">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-[20px]">
-          <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] text-gray-300`}>
+          <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] `}>
             SKILLS.
           </h1>
-          <div className="w-px h-36 bg-gray-400 mt-6"></div>
+          <div className="w-px h-36 bg-gray-900 dark:bg-gray-400 mt-6"></div>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-2 items- justify-center w-full  xl:mx-5 gap-10">
           <div>
-          <h1 className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest text-gray-300`}>
-            MY SKILLS. <hr className="w-[20vh]" />
+          <h1 className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest `}>
+            MY SKILLS. <hr className="w-[20vh] h-1 bg-gray-900 dark:bg-gray-400" />
           </h1>
             <h3
               className={`${courierPrime.className} w-full hidden md:block font-bold leading-tight text-[30px] z-50`}
