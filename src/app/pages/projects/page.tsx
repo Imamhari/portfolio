@@ -40,7 +40,7 @@ const projectList = [
     category: "full-stack",
     title: "Laut Lestari",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore ad fugiat facere perspiciatis voluptatem, laudantium temporibus nisi laborum odit repudiandae vitae exercitationem consequuntur veniam illo earum? Ad, voluptatem sapiente.",
+      "Many marine enthusiasts face challenges in finding quality exotic fish and reliable care information. Laut Lestari solves this with verified sellers, expert care guides, and a vibrant community forum. The platform promotes sustainability by partnering with eco-friendly fisheries and supporting marine conservation. It’s mobile-friendly, ensuring easy access to the marketplace and support, while offering secure payments and logistics for safe fish delivery.",
     stack: [
       { name: "Next JS," },
       { name: "Flask," },
@@ -58,7 +58,7 @@ const projectList = [
     category: "front-end",
     title: "Delish!",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore ad fugiat facere perspiciatis voluptatem, laudantium temporibus nisi laborum odit repudiandae vitae exercitationem consequuntur veniam illo earum? Ad, voluptatem sapiente.",
+      "To improve user retention and boost engagement, we conducted app review benchmarking, a survey with 37 respondents, and interviews with 5 participants. Findings showed users were overwhelmed by visiting multiple venues and found the review process too time-consuming. To address this, we proposed pre-filled review templates covering key categories like food, service, and ambiance, streamlining feedback while preserving detail. Success metrics and deadlines were set to guide improvements and drive increased review submissions in the next quarter.",
     stack: [
       { name: "Next JS," },
       { name: "Typescript," },
@@ -74,7 +74,7 @@ const projectList = [
     category: "front-end",
     title: "SahabatAjar.id",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, tempore ad fugiat facere perspiciatis voluptatem, laudantium temporibus nisi laborum odit repudiandae vitae exercitationem consequuntur veniam illo earum? Ad, voluptatem sapiente.",
+      "The digitalization of education, accelerated by COVID-19, led to a significant surge in the Learning Management System (LMS) market, which became one of the largest software sectors to boom during this period. By April 2020, 98% of higher education institutions transitioned to online learning, and companies embraced remote work, increasing the demand for LMS solutions. This market explosion in 2020 will continue well into the future. To address challenges, implementing Role-Based Access Control (RBAC) with specific permissions for different roles (e.g., admin, instructor, student) and simplifying administrative tasks will help optimize user management and improve the user experience across multiple institutions.",
     stack: [
       { name: "Next JS," },
       { name: "Typescript," },
@@ -99,7 +99,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[50px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white mt-10 mr-5"
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[50px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white mt-10 "
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -116,13 +116,16 @@ function Projects() {
             </h1>
             <div className="w-px h-36 bg-gray-400 pt-3"></div>
           </div>
+            <h1 className="text-lg block md:hidden tracking-widest text-gray-300 mb-10">
+              RECENT PROJECTS. <hr className="mr-[30vh]" />
+            </h1>
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
             <h3
-              className={`${courierPrime.className} w-full  font-bold leading-tight text-[30px]`}
+              className={`${courierPrime.className} w-full hidden md:flex font-bold leading-tight text-[30px]`}
             >
               Where ideas become interactive.
             </h3>
-            <div className="flex flex-col gap-[20px] pr-[30px]">
+            <div className="flex flex-col gap-[20px] md:pr-[30px]">
               {/* outline number */}
               <div
                 className={`${jetBrainsMono.className} text-8xl font-extrabold text-transparent text-outline`}
