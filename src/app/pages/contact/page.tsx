@@ -11,7 +11,7 @@ const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-const courierPrime = Source_Code_Pro({
+const courierPrime = Courier_Prime({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -31,12 +31,12 @@ function Contact() {
       </div>
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full min-h-[60vh]">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-10">
-          <h1 className="text-lg tracking-widest rotate-[-90deg] text-gray-300">
+          <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] text-gray-300`}>
             CONTACT.
           </h1>
           <div className="w-px h-36 bg-gray-400 mt-6"></div>
         </div>
-        <h1 className="text-lg block md:hidden tracking-widest text-gray-300">
+        <h1 className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest text-gray-300`}>
             CONTACT. <hr className="w-[15vh]" />
           </h1>
 
