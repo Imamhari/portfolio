@@ -1,13 +1,12 @@
 import React from "react";
 import HeroSection from "@/app/components/HeroSection";
-
-
 import dynamic from 'next/dynamic';
 
 const Lanyard = dynamic(() => import('@/app/components/Lanyard/Lanyard'), {
   ssr: false,
   loading: () => <div></div>,
 });
+
 function Home() {
   return (
     <section
