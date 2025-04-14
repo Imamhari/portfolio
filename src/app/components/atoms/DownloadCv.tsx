@@ -3,7 +3,7 @@ import { FaDownload } from "react-icons/fa6";
 function DownloadCv() {
   return (
     <button
-      className="rounded-md bg-slate-800 py-2 px-4 border border-orange-600 text-center text-sm text-white transition-all shadow-md hover:shadow-[inset_0_6px_10px_rgb(251,140,0)] focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none  "
+      className="rounded-md bg-slate-800 py-2 px-4 w-[20vh] border border-orange-600 flex justify-center text-center text-sm text-white transition-all shadow-md hover:shadow-[inset_0_6px_10px_rgb(251,140,0)] focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none  "
       type="button"
     >
       <a

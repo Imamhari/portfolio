@@ -36,7 +36,7 @@ const stats = [
 
 function StatsCard() {
   return (
-    <div className=" flex items-center justify-between gap-5 pt-12 w-full">
+    <div className=" md:flex items-center  justify-center xl:justify-between gap-5 pt-12 w-full hidden ">
       {stats.map((stat, index) => (
         <div key={index} className="bg-[#3f4346] w-[200px] h-[70px] flex gap-3 px-2 rounded-lg shadow-md text-white max-w-[200px] justify-center items-center hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
           <div className="flex ">{stat.icon}</div>

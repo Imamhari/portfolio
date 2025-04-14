@@ -8,18 +8,20 @@ function Home() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex justify-between"
+      className="relative w-full min-h-screen overflow-hidden flex flex-col-reverse lg:flex-row items-center justify-between"
     >
 
       {/* Konten Halaman */}
      
-        <div className="flex flex-col md:flex-row justify-between ">
-          <div className=" w-full md:w-[95vh]">
+        <div className="flex justify-between flex-wrap">
+          <div className=" w-full h-screen xl:w-[95vh] items-center">
             <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
           </div>
-          <div className="">
+            <div>
+
             <HeroSection />
-          </div>
+            </div>
+          
         </div>
     </section>
   );
