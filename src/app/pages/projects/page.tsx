@@ -237,6 +237,7 @@ function Projects() {
                           alt="project image"
                           fill
                           className="object-cover"
+                          priority={false}
                         />
                       </div>
                     </div>

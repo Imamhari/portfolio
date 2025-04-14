@@ -10,11 +10,11 @@ export default function Education() {
           <div className={styles.frontpage}>
             <div className="flex items-center h-full bg-gray-300 dark:bg-gray-700 rounded-[15px]">
               <Image
-                src="/pancasila.png"
+                src="/pancasila.webp"
                 width={300}
                 height={30}
                 alt="profile picture"
-                priority
+                priority={false}
               />
             </div>
           </div>
@@ -43,11 +43,11 @@ export default function Education() {
           <div className={styles.frontpage}>
             <div className="flex items-center h-full bg-gray-300 dark:bg-gray-700 rounded-[15px]">
               <Image
-                src="/revou.png"
+                src="/revou.webp"
                 width={300}
                 height={30}
                 alt="profile picture"
-                priority
+                priority={false}
               />
             </div>
           </div>
