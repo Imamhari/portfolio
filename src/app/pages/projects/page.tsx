@@ -121,7 +121,7 @@ function Projects() {
         }}
         className="container w-full"
       >
-        <div className="flex flex-col xl:flex-row ">
+        <div className="flex flex-col xl:flex-row min-h-[60vh]">
           <div className="relative hidden xl:flex flex-col justify-start items-center gap-[60px] pt-10">
             <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] `}>
               PROJECTS.
