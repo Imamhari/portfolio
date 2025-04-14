@@ -41,10 +41,10 @@ function Contact() {
           </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-start md:pb-[10vh] h-full">
-          <div className="flex flex-col items-center justify-center ">
-            <h3 className={`${courierPrime.className} w-full hidden md:block font-bold leading-tight text-[30px] z-30`}>Available for work, collaborations, <br /> or just a friendly hello.</h3>
+          <div className="flex flex-col items-center justify-center 3xl:mr-[40px]">
+            <h3 className={`${courierPrime.className} w-full hidden md:block  font-bold leading-tight text-[30px] z-30`}>Available for work, collaborations, <br /> or just a friendly hello.</h3>
             <p
-              className={`${sourceCodePro.className} w-full text-justify md:text-start font-normal leading-tight items-center justify-center mt-5`}
+              className={`${sourceCodePro.className} w-full  text-wrap text-justify md:text-start font-normal leading-tight items-center justify-center mt-5`}
             >
               I’m always open to discussing new projects, creative ideas or
               opportunities to be part of your visions.
