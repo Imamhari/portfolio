@@ -7,7 +7,7 @@ function DownloadCv() {
       type="button"
     >
       <a
-        href="https://docs.google.com/document/d/1LMTTMo8XyKlVlLvghRihS9RzjaJJ_9u0/edit?usp=drive_link&ouid=115166616640608674343&rtpof=true&sd=true"
+        href="https://drive.google.com/file/d/1QRviB9ZOqSb3oKQtgyqd-LNACybvs8j4/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="text-sm font-medium text-[#e9e9e9] hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-500 flex justify-center gap-3"
