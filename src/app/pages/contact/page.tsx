@@ -1,6 +1,5 @@
 "use client";
 import { useForm} from "@formspree/react";
-import Threads from "@/app/components/background/Threads";
 import { SiGmail, SiGooglemaps } from "react-icons/si";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { Source_Code_Pro, Courier_Prime } from "next/font/google";
@@ -26,9 +25,7 @@ function Contact() {
       id="contact"
       className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 text-black dark:text-white"
     >
-      <div className="absolute left-0 top-0 right-0 bottom-0 w-full h-full ">
-        <Threads amplitude={0.6} distance={1.4} enableMouseInteraction={true} />
-      </div>
+      
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full min-h-[60vh]">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-10">
           <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] `}>

@@ -17,7 +17,6 @@
     "clsx": "^2.1.1",
     "meshline": "^3.3.1",
     "next": "14.2.26",
-    "ogl": "^1.0.11",
     "react": "^18",
     "react-dom": "^18",
     "react-github-calendar": "^4.5.6",
