@@ -99,7 +99,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="mt-10]">
+          <div className="xl:mt-10">
             {activeTab === "skills" && <Skill />}
             {activeTab === "tools" && <Tools />}
           </div>

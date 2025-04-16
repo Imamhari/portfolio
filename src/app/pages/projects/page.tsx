@@ -222,7 +222,7 @@ function Projects() {
               {projectList.map((item, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center border-2 rounded-lg overflow-hidden">
+                    <div className="h-[460px] relative group flex justify-center items-center border-4 border-[#090c2c] dark:border-[#e9e9e9] shadow-xl rounded-lg overflow-hidden">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}

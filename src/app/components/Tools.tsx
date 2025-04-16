@@ -18,7 +18,7 @@ function Tools() {
       {icons.map((item, index) => (
         <div
           key={index}
-          className="flex items-center justify-center w-[100px] h-[100px] bg-[#3f4346] rounded-lg shadow-md text-white max-w-[100px] hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer m-2"
+          className="flex items-center justify-center w-[100px] h-[100px] bg-slate-200 dark:bg-blue-950 rounded-lg shadow-lg text-white max-w-[100px] hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer m-2"
         >
           <div>{item.icon}</div>
         </div>
