@@ -1,5 +1,5 @@
 "use client";
-import { IBM_Plex_Mono, Courier_Prime, Merriweather } from "next/font/google";
+import { IBM_Plex_Mono, Courier_Prime, Source_Code_Pro} from "next/font/google";
 import { Typewriter } from "react-simple-typewriter";
 import DownloadCv from "./atoms/DownloadCv";
 import SocialMedia from "./atoms/SocialMedia";
@@ -13,7 +13,9 @@ const courierPrime = Courier_Prime({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-const merriWeather = Merriweather({
+
+
+const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -50,9 +52,9 @@ const HeroSection = () => {
           </span>
         </h2>
         <p
-          className={`${merriWeather.className} text-base md:text-lg text-black dark:text-white text-justify mx-auto xl:mx-0  font-bold`}
+          className={`${sourceCodePro.className} text-base md:text-lg text-black dark:text-white text-justify mx-auto xl:mx-0  font-bold`}
         >
-          &quot;I don’t just write code; I build interactive and efficient
+          &quot;I don’t just write code, I build interactive and efficient
           digital experiences. With a passion for innovation, I create modern,
           responsive interfaces focused on user comfort and seamless
           functionality.&quot;

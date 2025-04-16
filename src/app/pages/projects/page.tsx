@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import type { StaticImageData } from 'next/image'
 import Link from "next/link";
@@ -113,12 +112,8 @@ function Projects() {
       id="projects"
       className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[50px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white mt-10 "
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-        }}
+      <div
+        
         className="container w-full"
       >
         <div className="flex flex-col xl:flex-row min-h-[60vh]">
@@ -253,7 +248,7 @@ function Projects() {
             </Swiper>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

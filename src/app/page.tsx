@@ -1,6 +1,3 @@
-'use client';
-// import { useEffect } from "react";
-// import Lenis from "@studio-freight/lenis";
 import Navbar from "./components/Navbar";
 import DarkModeToggleMobile from "./components/ui/DarkModeToggleMobile";
 import About from "./pages/about/page";
@@ -10,19 +7,6 @@ import Projects from "./pages/projects/page";
 import Skills from "./pages/skills/page";
 
 export default function Page() {
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     duration: 1.2,
-  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  //   });
-    
-  //   function raf(time: number) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-    
-  //   requestAnimationFrame(raf);
-  // }, []);  
 
   return (
     <main>
