@@ -53,3 +53,20 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.nav-with-notch::before {
+  content: "";
+  position: absolute;
+  top: -25px; /* Naik ke atas navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background-color: #090c2c; /* Sama dengan warna nav */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.dark .nav-with-notch::before {
+  background-color: #e9e9e9; /* Warna nav saat dark mode */
+}

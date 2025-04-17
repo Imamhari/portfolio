@@ -101,12 +101,31 @@ function Navbar() {
 
       {/* navbar bawah */}
       <nav className="fixed bottom-0 w-full h-[70px] bg-[#090c2c] dark:bg-[#e9e9e9] z-50 md:hidden flex justify-center items-center px-[5vh] ">
+      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-1 bg-[#e9e9e9] dark:bg-[#090c2c] "></div>
         <ul className="flex justify-between w-[700px]">
           {navItems.map((item) => (
-            <li key={item.name} className="relative w-[70px] h-[60px] z-10 ">
+            <li
+              key={item.name}
+              className="relative w-[70px] h-[60px] z-10 flex justify-center items-center"
+            >
+              {activeSection === item.path && (
+                <>
+                  {/* Lekukan Tengah */}
+                  <div className="absolute -top-[5px] left-1/2 -translate-x-1/2 w-[70px] h-[35px] bg-[#e9e9e9] dark:bg-[#090c2c] rounded-b-full z-0 shadow-md"></div>
+                  <span
+                    className="w-3.5 h-3.5 bg-transparent absolute -top-[4px] -left-[12px] 
+          rounded-tr-[11px] dark:shadow-shadowLeftDark shadow-shadowLeftLight"
+                  ></span>
+                  <span
+                    className="w-3.5 h-3.5 bg-transparent absolute -top-[4px] -right-[12px] 
+          rounded-tl-[11px] dark:shadow-shadowRightDark shadow-shadowRightLight"
+                  ></span>
+                </>
+              )}
+
               <Link
                 href={item.path}
-                className={`relative items-center w-[90%] h-[100%] text-center flex justify-center  ${
+                className={`relative items-center w-[90%] h-[100%] text-center flex justify-center ${
                   activeSection === item.path
                     ? "text-[#e9e9e9] dark:text-[#090c2c] bg-[#090c2c] dark:bg-[#e9e9e9] rounded-full border-4 border-[#e9e9e9] dark:border-[#090c2c] translate-y-[-35px]"
                     : "text-[#e9e9e9] dark:text-[#090c2c] hover:text-orange-600 dark:hover:text-orange-600"
