@@ -85,7 +85,7 @@ function Skills() {
                     key={tab.id}
                     data-id={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300
+                    className={`${sourceCodePro.className} relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300
                   ${
                     activeTab === tab.id
                       ? "text-white"

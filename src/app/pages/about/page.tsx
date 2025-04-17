@@ -94,7 +94,7 @@ function About() {
               key={tab.id}
               data-id={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300 transform
+              className={`${sourceCodePro.className} relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300 transform
                 ${
                   activeTab === tab.id
                     ? "text-white"

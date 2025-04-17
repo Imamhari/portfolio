@@ -1,4 +1,10 @@
+import { Courier_Prime } from "next/font/google";
 import { FaDownload } from "react-icons/fa6";
+
+const courierPrime = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 function DownloadCv() {
   return (
@@ -10,7 +16,7 @@ function DownloadCv() {
         href="https://drive.google.com/file/d/1QRviB9ZOqSb3oKQtgyqd-LNACybvs8j4/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm font-medium text-[#e9e9e9] hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-500 flex justify-center gap-3"
+        className={`${courierPrime.className} text-[15px] font-medium text-[#e9e9e9] hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-500 flex  items-center gap-3`}
       >
         Download CV
         <FaDownload size={20} className="ml-1" />

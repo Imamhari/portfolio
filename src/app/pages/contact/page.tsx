@@ -90,7 +90,7 @@ function Contact() {
 
           <div className="hidden md:block">
             <h4
-              className={`${sourceCodePro.className} w-full flex text-start text-[20px] font-bold leading-tight items-center justify-center mt-5`}
+              className={`${sourceCodePro.className} w-full flex text-start text-[25px] font-bold leading-tight items-center justify-center mt-5`}
             >
               Want to get in touch?
             </h4>
@@ -99,7 +99,7 @@ function Contact() {
               className="flex flex-col space-y-5 mt-5"
             >
               <div className="group">
-                <div className="relative overflow-hidden">
+                <div className={`${courierPrime.className} relative overflow-hidden`}>
                   <input
                     type="text"
                     placeholder="Your name"
@@ -125,7 +125,7 @@ function Contact() {
                 </div>
               </div>
               <div className="group">
-                <div className="relative overflow-hidden">
+                <div className={`${courierPrime.className} relative overflow-hidden`}>
                   <input
                     type="email"
                     placeholder="Your email"
@@ -153,7 +153,7 @@ function Contact() {
                 </div>
               </div>
               <div className="group">
-                <div className="relative overflow-hidden">
+                <div className={`${courierPrime.className} relative overflow-hidden`}>
                   <input
                     type="text"
                     placeholder="Subject"
@@ -180,7 +180,7 @@ function Contact() {
               </div>
 
               <div className="group">
-                <div className="relative overflow-hidden">
+                <div className={`${courierPrime.className} relative overflow-hidden`}>
                   <textarea
                     className="peer min-h-[11rem] w-full resize-none bg-transparent py-5 text-xl font-bold  outline-none  placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
                     placeholder="Your Message"
@@ -207,10 +207,10 @@ function Contact() {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30"
+                className={`${courierPrime.className} flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30`}
               >
                 <RiMailSendFill size={30} />
-                <span>SEND</span>
+                <span className="text-[20px]">SEND</span>
               </button>
             </form>
           </div>
