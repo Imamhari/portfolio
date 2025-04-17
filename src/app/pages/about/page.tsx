@@ -83,18 +83,18 @@ function About() {
       <div className="flex flex-col items-center justify-center w-full mt-10">
         <div
           ref={containerRef}
-          className="relative flex bg-white rounded-2xl gap-2 p-1"
+          className="relative flex bg-white rounded-2xl  p-1"
         >
           <span
             style={indicatorStyle}
-            className="absolute top-1 bottom-1 left-0 rounded-2xl bg-orange-400 transition-all duration-300"
+            className="absolute top-1 bottom-1 left-0 rounded-2xl  bg-orange-400 transition-all duration-300"
           ></span>
           {tabs.map((tab) => (
             <button
               key={tab.id}
               data-id={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`${sourceCodePro.className} relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300 transform
+              className={`${sourceCodePro.className} relative z-10 px-4 py-1 rounded-2xl font-semibold transition-all duration-300 transform text-sm md:text-base
                 ${
                   activeTab === tab.id
                     ? "text-white"
