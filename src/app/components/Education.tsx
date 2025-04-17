@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Education() {
   return (
     <div className="mt-20">
-      <div className={`${styles.wrapper} flex justify-center gap-20 `}>
+      <div className={`${styles.wrapper}  flex flex-wrap justify-center gap-20 `}>
         <div className={styles.card}>
           <div className={styles.frontpage}>
             <div className="flex items-center h-full bg-gray-300 dark:bg-gray-700 rounded-[15px]">

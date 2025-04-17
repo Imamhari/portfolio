@@ -16,19 +16,19 @@ export default function Page() {
           <DarkModeToggleMobile />
         </div>
         <div className="3xl:mx-[20vh]">
-          <div id="home" className="scroll-mt-24">
+          <div id="home" className="md:scroll-mt-24">
             <Home />
           </div>
-          <div id="about" className="scroll-mt-24">
+          <div id="about" className="md:scroll-mt-24">
             <About />
           </div>
-          <div id="projects" className="scroll-mt-24">
+          <div id="projects" className="md:scroll-mt-24">
             <Projects />
           </div>
-          <div id="skills" className="scroll-mt-24">
+          <div id="skills" className="md:scroll-mt-24">
             <Skills />
           </div>
-          <div id="contact" className="scroll-mt-24">
+          <div id="contact" className="md:scroll-mt-24">
             <Contact />
           </div>
         </div>
