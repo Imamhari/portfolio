@@ -1,5 +1,5 @@
 "use client";
-import { useForm} from "@formspree/react";
+import { useForm } from "@formspree/react";
 import { SiGmail, SiGooglemaps } from "react-icons/si";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { Source_Code_Pro, Courier_Prime } from "next/font/google";
@@ -27,21 +27,29 @@ function Contact() {
       id="contact"
       className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 text-black dark:text-white"
     >
-      
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full min-h-[60vh]">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-10">
-          <h1 className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] `}>
+          <h1
+            className={`${sourceCodePro.className} text-lg tracking-widest rotate-[-90deg] `}
+          >
             CONTACT.
           </h1>
           <div className="w-px h-36 bg-gray-900 dark:bg-gray-400 mt-6"></div>
         </div>
-        <h1 className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest `}>
-            CONTACT. <hr className="w-[15vh] h-1 bg-gray-900 dark:bg-gray-400" />
-          </h1>
+        <h1
+          className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest `}
+        >
+          CONTACT. <hr className="w-[15vh] h-1 bg-gray-900 dark:bg-gray-400" />
+        </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-start md:pb-[10vh] h-full">
           <div className="flex flex-col items-center justify-center 3xl:mr-[40px]">
-            <h3 className={`${courierPrime.className} w-full hidden md:block  font-bold leading-tight text-[30px] z-30`}>Available for work, collaborations, <br /> or just a friendly hello.</h3>
+            <h3
+              className={`${courierPrime.className} w-full hidden md:block  font-bold leading-tight text-[30px] z-30`}
+            >
+              Available for work, collaborations, <br /> or just a friendly
+              hello.
+            </h3>
             <p
               className={`${sourceCodePro.className} w-full  text-wrap text-justify md:text-start font-normal leading-tight items-center justify-center mt-5`}
             >
@@ -88,9 +96,9 @@ function Contact() {
                 </div>
               </div>
               <div className="flex md:hidden flex-col space-y-3 xl:items-start justify-center items-center w-full pb-[20vh]">
-                            <SocialMedia />
-                            <DownloadCv />
-                          </div>
+                <SocialMedia />
+                <DownloadCv />
+              </div>
             </div>
           </div>
 
@@ -105,7 +113,9 @@ function Contact() {
               className="flex flex-col space-y-5 mt-5"
             >
               <div className="group">
-                <div className={`${courierPrime.className} relative overflow-hidden`}>
+                <div
+                  className={`${courierPrime.className} relative overflow-hidden`}
+                >
                   <input
                     type="text"
                     placeholder="Your name"
@@ -131,7 +141,9 @@ function Contact() {
                 </div>
               </div>
               <div className="group">
-                <div className={`${courierPrime.className} relative overflow-hidden`}>
+                <div
+                  className={`${courierPrime.className} relative overflow-hidden`}
+                >
                   <input
                     type="email"
                     placeholder="Your email"
@@ -159,7 +171,9 @@ function Contact() {
                 </div>
               </div>
               <div className="group">
-                <div className={`${courierPrime.className} relative overflow-hidden`}>
+                <div
+                  className={`${courierPrime.className} relative overflow-hidden`}
+                >
                   <input
                     type="text"
                     placeholder="Subject"
@@ -186,7 +200,9 @@ function Contact() {
               </div>
 
               <div className="group">
-                <div className={`${courierPrime.className} relative overflow-hidden`}>
+                <div
+                  className={`${courierPrime.className} relative overflow-hidden`}
+                >
                   <textarea
                     className="peer min-h-[11rem] w-full resize-none bg-transparent py-5 text-xl font-bold  outline-none  placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
                     placeholder="Your Message"

@@ -96,7 +96,7 @@ function Navbar() {
             <DarkModeToggle />
           </div>
         </div>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-3 bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-lg"></div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-3 bg-[#e9e9e9] dark:bg-[#090c2c] rounded-t-lg z-0"></div>
       </nav>
 
       {/* navbar bawah */}

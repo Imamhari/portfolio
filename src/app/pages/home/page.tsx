@@ -37,11 +37,11 @@ function Home() {
     >
       {/* Konten Halaman */}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-screen relative">
+      <div className="grid grid-cols-1 xl:grid-cols-2 w-full h-screen relative">
         <div className=" w-full h-screen xl:w-auto items-center">
           <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
         </div>
-        <div className="flex flex-col md:pt-[70px] xl:pt-[150px] text-black dark:text-white relative lg:mr-[10vh]">
+        <div className="hidden xl:flex  flex-col md:pt-[70px] xl:pt-[150px] text-black dark:text-white relative lg:mr-[10vh]">
           <div className="flex flex-col gap-6 xl:max-w-2xl w-full mx-auto  md:justify-center md:items-start ">
             <h1
               className={`${ibmPlexMono.className} text-4xl xl:text-5xl  font-bold leading-tight text-center md:text-left`}
