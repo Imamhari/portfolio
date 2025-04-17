@@ -5,6 +5,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { Source_Code_Pro, Courier_Prime } from "next/font/google";
 
 import { RiMailSendFill } from "react-icons/ri";
+import DownloadCv from "@/app/components/atoms/DownloadCv";
+import SocialMedia from "@/app/components/atoms/SocialMedia";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -85,6 +87,10 @@ function Contact() {
                   </p>
                 </div>
               </div>
+              <div className="flex md:hidden flex-col space-y-3 xl:items-start justify-center items-center w-full pb-[20vh]">
+                            <SocialMedia />
+                            <DownloadCv />
+                          </div>
             </div>
           </div>
 
