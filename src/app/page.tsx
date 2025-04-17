@@ -15,10 +15,10 @@ export default function Page() {
         <div className="fixed md:hidden z-50">
           <DarkModeToggleMobile />
         </div>
-        <div className="3xl:mx-[20vh]">
           <div id="home" className="md:scroll-mt-24">
             <Home />
           </div>
+        <div className=" 2xl:mx-[7vw] 3xl:mx-[20vw]">
           <div id="about" className="md:scroll-mt-24">
             <About />
           </div>

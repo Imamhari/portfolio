@@ -15,7 +15,7 @@ const config: Config = {
       },
       screens: {
         '2xl': '1536px', // sudah default, tapi kita definisikan eksplisit
-        '3xl': '1800px', // custom breakpoint untuk layar ekstra besar
+        '3xl': '2000px', // custom breakpoint untuk layar ekstra besar
       },
       boxShadow: {
         shadowLeftDark: "4.1px -5px 0 0 rgb(9, 12, 44)",
