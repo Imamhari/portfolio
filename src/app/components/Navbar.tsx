@@ -101,7 +101,7 @@ function Navbar() {
 
       {/* navbar bawah */}
       <nav className="fixed bottom-0 w-full h-[70px] bg-[#090c2c] dark:bg-[#e9e9e9] z-50 md:hidden flex justify-center items-center px-[5vh] ">
-      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-1 bg-[#e9e9e9] dark:bg-[#090c2c] "></div>
+      <div className="absolute -top-1.5 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] h-1.5 bg-[#e9e9e9] dark:bg-[#090c2c] "></div>
         <ul className="flex justify-between w-[700px]">
           {navItems.map((item) => (
             <li
@@ -113,11 +113,11 @@ function Navbar() {
                   {/* Lekukan Tengah */}
                   <div className="absolute -top-[5px] left-1/2 -translate-x-1/2 w-[70px] h-[35px] bg-[#e9e9e9] dark:bg-[#090c2c] rounded-b-full z-0 shadow-md"></div>
                   <span
-                    className="w-3.5 h-3.5 bg-transparent absolute -top-[4px] -left-[12px] 
+                    className="w-3.5 h-3.5 bg-transparent absolute -top-[5px] -left-[13px] 
           rounded-tr-[11px] dark:shadow-shadowLeftDark shadow-shadowLeftLight"
                   ></span>
                   <span
-                    className="w-3.5 h-3.5 bg-transparent absolute -top-[4px] -right-[12px] 
+                    className="w-3.5 h-3.5 bg-transparent absolute -top-[5px] -right-[13px] 
           rounded-tl-[11px] dark:shadow-shadowRightDark shadow-shadowRightLight"
                   ></span>
                 </>
