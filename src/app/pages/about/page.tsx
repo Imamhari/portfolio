@@ -42,7 +42,7 @@ function About() {
   return (
     <section
       id="about"
-      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white mt-20 xl:mb-[20vh]"
+      className="flex flex-col space-y-5 p-0 pt-[50px] md:p-[70px] md:pt-2 relative mx-2 xl:mx-0 h-full text-black dark:text-white md:mt-20 xl:mb-[20vh]"
     >
       <div className="relative flex flex-col md:flex-row items-start md:items-stretch w-full">
         <div className="relative hidden md:flex flex-col justify-start items-center  gap-4 pt-10">

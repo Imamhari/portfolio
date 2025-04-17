@@ -1,6 +1,16 @@
 import React from "react";
 import styles from "../styles/flipCard.module.css";
 import Image from "next/image";
+import { Source_Code_Pro, Courier_Prime } from "next/font/google";
+
+const courierPrime = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export default function Education() {
   return (
@@ -18,11 +28,12 @@ export default function Education() {
               />
             </div>
           </div>
-          <div className={styles.backpage}>
+          <div className={`${styles.backpage} bg-[#E9E9E9] dark:bg-[#394150]`}>
             <div className={styles.cardcontent}>
-              <h3 className="text-center text-black text-[20px]">
+              <h3 className={`${courierPrime.className} text-center text-black dark:text-white text-[20px]`}>
                 Pancasila University
               </h3>
+              <div className={sourceCodePro.className}>
               <p className={styles.carddescription}>
                 Diploma of Engineering (Electrical)
               </p>
@@ -36,6 +47,7 @@ export default function Education() {
                   Explore More
                 </a>
               </button>
+              </div>
             </div>
           </div>
         </div>
@@ -51,9 +63,10 @@ export default function Education() {
               />
             </div>
           </div>
-          <div className={styles.backpage}>
+          <div className={`${styles.backpage} bg-[#E9E9E9] dark:bg-[#394150]`}>
             <div className={styles.cardcontent}>
-              <h3 className="text-center text-black">RevoU</h3>
+              <h3 className={`${courierPrime.className} text-center text-black dark:text-white text-[20px]`}>RevoU</h3>
+              <div className={`${sourceCodePro.className} text-black dark:text-white`}>
               <p className={styles.carddescription}>
                 Full-stack Software Engineer
               </p>
@@ -69,6 +82,7 @@ export default function Education() {
                   Explore More
                 </a>
               </button>
+              </div>
             </div>
           </div>
         </div>

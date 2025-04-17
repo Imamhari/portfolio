@@ -47,7 +47,6 @@
 }
 
 .backpage{
-  background-color: #fff;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -74,12 +73,10 @@
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: #333;
 }
 
 .cardbutton{
-  background-color: aquamarine;
-  color: #fff;
+  background-color: rgb(233, 190, 51);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -89,7 +86,7 @@
 }
 
 .cardbutton:hover{
-  background-color: transparent;
-  color: #333;
+  background-color: rgb(221, 173, 17);
   border: 1px solid #333;
 }
+

@@ -33,7 +33,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen overflow-hidden flex flex-col-reverse lg:flex-row items-center justify-between"
+      className="relative w-full md:min-h-screen overflow-hidden flex flex-col-reverse lg:flex-row items-center justify-between"
     >
       {/* Konten Halaman */}
 
