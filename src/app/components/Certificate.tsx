@@ -1,6 +1,16 @@
 "use client";
-
+import { Courier_Prime, Source_Code_Pro } from "next/font/google";
 import { useState } from "react";
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const courierPrime = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 type PdfFile = {
   id: string;
@@ -56,7 +66,7 @@ export default function Certificate() {
               className="rounded"
               title={pdf.title}
             ></iframe>
-            <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-white text-center mt-1">
+            <h3 className={`${sourceCodePro.className} text-lg font-semibold mb-2 text-gray-800 dark:text-white text-center mt-1`}>
               {pdf.title}
             </h3>
           </div>
@@ -66,7 +76,7 @@ export default function Certificate() {
       <div className="flex justify-center mt-6">
         <button
           onClick={() => setShowAll((prev) => !prev)}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-lg transition-all"
+          className={`${courierPrime.className} bg-orange-600 hover:bg-orange-400 text-white font-medium px-6 py-2 rounded-lg transition-all`}
         >
           {showAll ? "Show Less Certificates" : "Load More Certificates"}
         </button>
