@@ -241,8 +241,8 @@ function Projects() {
               })}
               {/* slider buttons */}
               <ProjectSliderButtons
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-green-500 text:primary hover:bg-green-500-hover text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
+                btnStyles="bg-green-500 text:primary hover:bg-green-500-hover text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-2xl"
                 iconStyles="text-white hover:text-orange-500 transition duration-500"
               />
             </Swiper>
