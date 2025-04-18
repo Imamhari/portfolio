@@ -20,6 +20,7 @@ import {
 } from "next/font/google";
 
 import ProjectSliderButtons from "@/app/components/ui/ProjectSliderButtons";
+import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -127,6 +128,16 @@ function Projects() {
               RECENT PROJECTS. <hr className="w-[30vh] h-1 bg-gray-900 dark:bg-gray-400" />
             </h1>
           <div className="w-full xl:w-[80%] xl:h-[460px] flex flex-col xl:justify-beetween order-2 xl:order-none">
+            <AnimatedContent
+                      distance={150}
+                      direction="horizontal"
+                      reverse={true}
+                      config={{ tension: 100, friction: 40 }}
+                      initialOpacity={0}
+                      animateOpacity
+                      scale={1}
+                      threshold={0.2}
+                      delay={1500}>
             <h3
               className={`${courierPrime.className} w-full hidden md:flex font-bold leading-tight text-[30px]`}
             >
@@ -211,8 +222,19 @@ function Projects() {
                 </Link>
               </div>
             </div>
+            </AnimatedContent>
           </div>
           <div className="w-full xl:w-[50%]">
+            <AnimatedContent
+                      distance={150}
+                      direction="horizontal"
+                      reverse={false}
+                      config={{ tension: 100, friction: 40 }}
+                      initialOpacity={0}
+                      animateOpacity
+                      scale={1}
+                      threshold={0.2}
+                      delay={1500}>
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
@@ -246,6 +268,7 @@ function Projects() {
                 iconStyles="text-white hover:text-orange-500 transition duration-500"
               />
             </Swiper>
+            </AnimatedContent>
           </div>
         </div>
       </div>

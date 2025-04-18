@@ -55,6 +55,11 @@ function About() {
           </h1>
           <div className="w-px h-36 bg-gray-900 dark:bg-gray-400 mt-6"></div>
         </div>
+          <h1
+            className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest`}
+          >
+            ABOUT. <hr className="w-24 h-1 bg-gray-900 dark:bg-gray-400" />
+          </h1>
         <AnimatedContent
           distance={150}
           direction="vertical"
@@ -67,11 +72,6 @@ function About() {
           delay={1000}
           
         >
-          <h1
-            className={`${sourceCodePro.className} text-lg block md:hidden tracking-widest`}
-          >
-            ABOUT. <hr className="w-24 h-1 bg-gray-900 dark:bg-gray-400" />
-          </h1>
           <h3
             className={`${courierPrime.className} w-full hidden md:block  font-bold leading-tight text-[30px] z-50`}
           >

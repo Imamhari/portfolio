@@ -12,6 +12,7 @@ interface AnimatedContentProps {
   scale?: number;
   threshold?: number;
   delay?: number;
+  className?: string;
 }
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
