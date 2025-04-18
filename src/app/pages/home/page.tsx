@@ -9,6 +9,7 @@ import { Typewriter } from "react-simple-typewriter";
 import DownloadCv from "@/app/components/atoms/DownloadCv";
 import SocialMedia from "@/app/components/atoms/SocialMedia";
 import StatsCard from "@/app/components/atoms/StatsCard";
+import FadeContent from "@/app/components/FadeContent/FadeContent";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -41,7 +42,14 @@ function Home() {
         <div className=" w-full h-screen xl:w-auto items-center">
           <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
         </div>
-        <div className="hidden xl:flex flex-col md:pt-[70px] xl:pt-[150px] text-black dark:text-white relative lg:mr-[10vh] lg:mt-[10vh]  3xl:mt-[20vh] ">
+        <FadeContent
+          blur={true}
+          duration={2000}
+          delay={100}
+          easing="ease-in"
+          initialOpacity={0}
+          className="hidden xl:flex flex-col md:pt-[70px] xl:pt-[150px] text-black dark:text-white relative lg:mr-[10vh] lg:mt-[10vh]  3xl:mt-[20vh] "
+        >
           <div className="flex flex-col gap-6 xl:max-w-2xl w-full mx-auto  md:justify-center md:items-start ">
             <h1
               className={`${ibmPlexMono.className} text-4xl xl:text-5xl  font-bold leading-tight text-center md:text-left`}
@@ -84,7 +92,7 @@ function Home() {
               <StatsCard />
             </div>
           </div>
-        </div>
+        </FadeContent>
       </div>
     </section>
   );
