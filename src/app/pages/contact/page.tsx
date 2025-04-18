@@ -23,24 +23,34 @@ const courierPrime = Courier_Prime({
 function Contact() {
   const [state, handleSubmit] = useForm("mgvaryez");
   const formRef = useRef<HTMLFormElement>(null);
-  // const [isSubmitting, setIsSubmitting] = useState(false);
+  const [modal, setModal] = useState(false);
   const hasShownToast = useRef(false); // untuk mencegah toast muncul 2x
 
   useEffect(() => {
     if (state.succeeded && !hasShownToast.current) {
       toast.success("Message sent successfully!");
       hasShownToast.current = true;
+      setTimeout(() => {
+        const audio = new Audio("/sound/minion-banana.mp3");
+        audio.play();
+        
+        setModal(true);
+      }, 1000); // Set modal to true when the form is submitted successfully
       // Reset form input
       formRef.current?.reset();
-    } else if (state.errors && Object.keys(state.errors).length > 0 && !hasShownToast.current) {
+    } else if (
+      state.errors &&
+      Object.keys(state.errors).length > 0 &&
+      !hasShownToast.current
+    ) {
       toast.error("Something went wrong. Please try again.");
       hasShownToast.current = true;
     }
   }, [state]);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    hasShownToast.current = false; // ← reset setiap kali submit
-    // setIsSubmitting(true);
+    hasShownToast.current = false;
+
     handleSubmit(e);
   };
 
@@ -154,7 +164,7 @@ function Contact() {
               </h4>
               <form
                 ref={formRef}
-                onSubmit={onSubmit} 
+                onSubmit={onSubmit}
                 className="flex flex-col space-y-5 mt-5"
               >
                 <div className="group">
@@ -277,13 +287,33 @@ function Contact() {
                   className={`${courierPrime.className} flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30`}
                 >
                   <RiMailSendFill size={30} />
-                  <span className="text-[20px]"> {state.submitting ? "Sending..." : "SEND"}</span>
+                  <span className="text-[20px]">
+                    {" "}
+                    {state.submitting ? "Sending..." : "SEND"}
+                  </span>
                 </button>
               </form>
             </AnimatedContent>
           </div>
         </div>
       </div>
+      {/* Modal */}
+      {modal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
+            <h2 className="text-2xl font-semibold mb-4">
+              Thanks for your message!
+            </h2>
+            <p className="mb-6">I’ll get back to you as soon as possible.</p>
+            <button
+              onClick={() => setModal(false)}
+              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-80"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
