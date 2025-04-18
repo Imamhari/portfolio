@@ -4,18 +4,24 @@ import { useForm } from "@formspree/react";
 import { toast } from "react-hot-toast";
 import { SiGmail, SiGooglemaps } from "react-icons/si";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { Source_Code_Pro, Courier_Prime } from "next/font/google";
-
+import { Source_Code_Pro, Courier_Prime, Roboto_Mono } from "next/font/google";
+import Image from "next/image";
 import { RiMailSendFill } from "react-icons/ri";
 import DownloadCv from "@/app/components/atoms/DownloadCv";
 import SocialMedia from "@/app/components/atoms/SocialMedia";
 import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
+import { IoMdCloseCircle } from "react-icons/io";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 const courierPrime = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -33,7 +39,7 @@ function Contact() {
       setTimeout(() => {
         const audio = new Audio("/sound/minion-banana.mp3");
         audio.play();
-        
+
         setModal(true);
       }, 1000); // Set modal to true when the form is submitted successfully
       // Reset form input
@@ -299,17 +305,20 @@ function Contact() {
       </div>
       {/* Modal */}
       {modal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 shadow-[200px]">
           <div className="bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
-            <h2 className="text-2xl font-semibold mb-4">
-              Thanks for your message!
-            </h2>
-            <p className="mb-6">I’ll get back to you as soon as possible.</p>
+            <Image
+              src="/minion.jpg"
+              alt="Thank you"
+              width={400}
+              height={400}
+              className="mx-auto"
+            />
             <button
               onClick={() => setModal(false)}
-              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-80"
+              className={`${robotoMono.className} px-4 py-2 rounded-lg font-bold text-white bg-red-500 hover:opacity-70`}
             >
-              Close
+              CLOSE
             </button>
           </div>
         </div>
