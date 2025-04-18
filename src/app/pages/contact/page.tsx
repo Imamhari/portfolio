@@ -1,5 +1,7 @@
 "use client";
+import { useEffect, useRef } from "react";
 import { useForm } from "@formspree/react";
+import { toast } from "react-hot-toast";
 import { SiGmail, SiGooglemaps } from "react-icons/si";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { Source_Code_Pro, Courier_Prime } from "next/font/google";
@@ -8,6 +10,7 @@ import { RiMailSendFill } from "react-icons/ri";
 import DownloadCv from "@/app/components/atoms/DownloadCv";
 import SocialMedia from "@/app/components/atoms/SocialMedia";
 import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
+
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -20,9 +23,18 @@ const courierPrime = Courier_Prime({
 
 function Contact() {
   const [state, handleSubmit] = useForm("mgvaryez");
-  if (state.succeeded) {
-    return <p>Thanks for oportunity!</p>;
-  }
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Pesan berhasil dikirim!");
+
+       // Reset form input
+      formRef.current?.reset();
+    } else if (state.errors && Object.keys(state.errors).length > 0) {
+      toast.error("Terjadi kesalahan saat mengirim pesan.");
+    }
+  }, [state]);
   return (
     <section
       id="contact"
@@ -132,6 +144,7 @@ function Contact() {
                 Want to get in touch?
               </h4>
               <form
+                ref={formRef}
                 onSubmit={handleSubmit}
                 className="flex flex-col space-y-5 mt-5"
               >
@@ -252,6 +265,9 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={state.submitting}
+                  onClick={() => {
+                    if (state.submitting) toast.loading("Mengirim...");
+                  }}
                   className={`${courierPrime.className} flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30`}
                 >
                   <RiMailSendFill size={30} />
