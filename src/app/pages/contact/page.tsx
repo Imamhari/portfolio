@@ -7,6 +7,7 @@ import { Source_Code_Pro, Courier_Prime } from "next/font/google";
 import { RiMailSendFill } from "react-icons/ri";
 import DownloadCv from "@/app/components/atoms/DownloadCv";
 import SocialMedia from "@/app/components/atoms/SocialMedia";
+import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -43,7 +44,18 @@ function Contact() {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-start md:pb-[10vh] h-full">
-          <div className="flex flex-col items-center justify-center 3xl:mr-[40px]">
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={true}
+            config={{ tension: 100, friction: 40 }}
+            initialOpacity={0}
+            animateOpacity
+            scale={1}
+            threshold={0.2}
+            delay={1500}
+            className="flex flex-col items-center justify-center 3xl:mr-[40px]"
+          >
             <h3
               className={`${courierPrime.className} w-full hidden md:block  font-bold leading-tight text-[30px] z-30`}
             >
@@ -100,141 +112,153 @@ function Contact() {
                 <DownloadCv />
               </div>
             </div>
-          </div>
+          </AnimatedContent>
 
           <div className="hidden md:block">
-            <h4
-              className={`${sourceCodePro.className} w-full flex text-start text-[25px] font-bold leading-tight items-center justify-center mt-5`}
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={false}
+              config={{ tension: 100, friction: 40 }}
+              initialOpacity={0}
+              animateOpacity
+              scale={1}
+              threshold={0.2}
+              delay={1500}
             >
-              Want to get in touch?
-            </h4>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col space-y-5 mt-5"
-            >
-              <div className="group">
-                <div
-                  className={`${courierPrime.className} relative overflow-hidden`}
-                >
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    autoComplete="off"
-                    className="peer w-full bg-transparent py-5 text-xl font-bold outline-none placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
-                    name="name"
-                  />
-                  <svg
-                    viewBox="0 0 300 100"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
-                    preserveAspectRatio="none"
-                    style={{
-                      translate: "none",
-                      rotate: "none",
-                      scale: "none",
-                      transform: "translate(66%, 0px)",
-                    }}
-                  >
-                    <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
-                  </svg>
-                </div>
-              </div>
-              <div className="group">
-                <div
-                  className={`${courierPrime.className} relative overflow-hidden`}
-                >
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    autoComplete="off"
-                    className="peer w-full bg-transparent py-5 text-xl font-bold outline-none placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
-                    id="email"
-                    name="email"
-                  />
-
-                  <svg
-                    viewBox="0 0 300 100"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
-                    preserveAspectRatio="none"
-                    style={{
-                      translate: "none",
-                      rotate: "none",
-                      scale: "none",
-                      transform: "translate(66%, 0px)",
-                    }}
-                  >
-                    <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
-                  </svg>
-                </div>
-              </div>
-              <div className="group">
-                <div
-                  className={`${courierPrime.className} relative overflow-hidden`}
-                >
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    autoComplete="off"
-                    className="peer w-full bg-transparent py-5 text-xl font-bold outline-none placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
-                    name="subject"
-                  />
-                  <svg
-                    viewBox="0 0 300 100"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
-                    preserveAspectRatio="none"
-                    style={{
-                      translate: "none",
-                      rotate: "none",
-                      scale: "none",
-                      transform: "translate(66%, 0px)",
-                    }}
-                  >
-                    <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
-                  </svg>
-                </div>
-              </div>
-
-              <div className="group">
-                <div
-                  className={`${courierPrime.className} relative overflow-hidden`}
-                >
-                  <textarea
-                    className="peer min-h-[11rem] w-full resize-none bg-transparent py-5 text-xl font-bold  outline-none  placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
-                    placeholder="Your Message"
-                    id="message"
-                    name="message"
-                  ></textarea>{" "}
-                  <svg
-                    viewBox="0 0 300 100"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
-                    preserveAspectRatio="none"
-                    style={{
-                      translate: "none",
-                      rotate: "none",
-                      scale: "none",
-                      transform: "translate(66%, 0px)",
-                    }}
-                  >
-                    <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
-                  </svg>
-                </div>
-              </div>
-              <button
-                type="submit"
-                disabled={state.submitting}
-                className={`${courierPrime.className} flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30`}
+              <h4
+                className={`${sourceCodePro.className} w-full flex text-start text-[25px] font-bold leading-tight items-center justify-center mt-5`}
               >
-                <RiMailSendFill size={30} />
-                <span className="text-[20px]">SEND</span>
-              </button>
-            </form>
+                Want to get in touch?
+              </h4>
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col space-y-5 mt-5"
+              >
+                <div className="group">
+                  <div
+                    className={`${courierPrime.className} relative overflow-hidden`}
+                  >
+                    <input
+                      type="text"
+                      placeholder="Your name"
+                      autoComplete="off"
+                      className="peer w-full bg-transparent py-5 text-xl font-bold outline-none placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
+                      name="name"
+                    />
+                    <svg
+                      viewBox="0 0 300 100"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
+                      preserveAspectRatio="none"
+                      style={{
+                        translate: "none",
+                        rotate: "none",
+                        scale: "none",
+                        transform: "translate(66%, 0px)",
+                      }}
+                    >
+                      <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className="group">
+                  <div
+                    className={`${courierPrime.className} relative overflow-hidden`}
+                  >
+                    <input
+                      type="email"
+                      placeholder="Your email"
+                      autoComplete="off"
+                      className="peer w-full bg-transparent py-5 text-xl font-bold outline-none placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
+                      id="email"
+                      name="email"
+                    />
+
+                    <svg
+                      viewBox="0 0 300 100"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
+                      preserveAspectRatio="none"
+                      style={{
+                        translate: "none",
+                        rotate: "none",
+                        scale: "none",
+                        transform: "translate(66%, 0px)",
+                      }}
+                    >
+                      <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className="group">
+                  <div
+                    className={`${courierPrime.className} relative overflow-hidden`}
+                  >
+                    <input
+                      type="text"
+                      placeholder="Subject"
+                      autoComplete="off"
+                      className="peer w-full bg-transparent py-5 text-xl font-bold outline-none placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
+                      name="subject"
+                    />
+                    <svg
+                      viewBox="0 0 300 100"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
+                      preserveAspectRatio="none"
+                      style={{
+                        translate: "none",
+                        rotate: "none",
+                        scale: "none",
+                        transform: "translate(66%, 0px)",
+                      }}
+                    >
+                      <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="group">
+                  <div
+                    className={`${courierPrime.className} relative overflow-hidden`}
+                  >
+                    <textarea
+                      className="peer min-h-[11rem] w-full resize-none bg-transparent py-5 text-xl font-bold  outline-none  placeholder:text-gray-600  dark:placeholder:text-gray-400  focus:placeholder:text-gray-400 dark:focus:placeholder:text-gray-600"
+                      placeholder="Your Message"
+                      id="message"
+                      name="message"
+                    ></textarea>{" "}
+                    <svg
+                      viewBox="0 0 300 100"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="input-line-1 pointer-events-none absolute bottom-0 right-0 h-[90px] w-[300%] fill-none stroke-[3]  stroke-gray-400 dark:stroke-white focus:stroke-black peer-focus:!stroke-black dark:peer-focus:!stroke-gray-600"
+                      preserveAspectRatio="none"
+                      style={{
+                        translate: "none",
+                        rotate: "none",
+                        scale: "none",
+                        transform: "translate(66%, 0px)",
+                      }}
+                    >
+                      <path d="M0 90H100C110 90 120 84 130 78C140 72 160 72 170 78C180 84 190 90 200 90H300"></path>
+                    </svg>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className={`${courierPrime.className} flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30`}
+                >
+                  <RiMailSendFill size={30} />
+                  <span className="text-[20px]">SEND</span>
+                </button>
+              </form>
+            </AnimatedContent>
           </div>
         </div>
       </div>
