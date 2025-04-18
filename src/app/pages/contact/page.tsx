@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "@formspree/react";
 import { toast } from "react-hot-toast";
 import { SiGmail, SiGooglemaps } from "react-icons/si";
@@ -10,7 +10,6 @@ import { RiMailSendFill } from "react-icons/ri";
 import DownloadCv from "@/app/components/atoms/DownloadCv";
 import SocialMedia from "@/app/components/atoms/SocialMedia";
 import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
-
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -24,17 +23,27 @@ const courierPrime = Courier_Prime({
 function Contact() {
   const [state, handleSubmit] = useForm("mgvaryez");
   const formRef = useRef<HTMLFormElement>(null);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  const hasShownToast = useRef(false); // untuk mencegah toast muncul 2x
 
   useEffect(() => {
-    if (state.succeeded) {
-      toast.success("Pesan berhasil dikirim!");
-
-       // Reset form input
+    if (state.succeeded && !hasShownToast.current) {
+      toast.success("Message sent successfully!");
+      hasShownToast.current = true;
+      // Reset form input
       formRef.current?.reset();
-    } else if (state.errors && Object.keys(state.errors).length > 0) {
-      toast.error("Terjadi kesalahan saat mengirim pesan.");
+    } else if (state.errors && Object.keys(state.errors).length > 0 && !hasShownToast.current) {
+      toast.error("Something went wrong. Please try again.");
+      hasShownToast.current = true;
     }
   }, [state]);
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    hasShownToast.current = false; // ← reset setiap kali submit
+    // setIsSubmitting(true);
+    handleSubmit(e);
+  };
+
   return (
     <section
       id="contact"
@@ -145,7 +154,7 @@ function Contact() {
               </h4>
               <form
                 ref={formRef}
-                onSubmit={handleSubmit}
+                onSubmit={onSubmit} 
                 className="flex flex-col space-y-5 mt-5"
               >
                 <div className="group">
@@ -265,13 +274,10 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  onClick={() => {
-                    if (state.submitting) toast.loading("Mengirim...");
-                  }}
                   className={`${courierPrime.className} flex items-center justify-center space-x-2 text-white dark:text-black bg-[#090c2c] dark:bg-[#e9e9e9] py-5 px-6 rounded-md hover:bg-[#090c2c]/80 dark:hover:bg-[#e9e9e9]/80 transition duration-200 ease-in-out z-30`}
                 >
                   <RiMailSendFill size={30} />
-                  <span className="text-[20px]">SEND</span>
+                  <span className="text-[20px]"> {state.submitting ? "Sending..." : "SEND"}</span>
                 </button>
               </form>
             </AnimatedContent>
