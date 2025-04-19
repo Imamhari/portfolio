@@ -10,7 +10,7 @@ import { RiMailSendFill } from "react-icons/ri";
 import DownloadCv from "@/app/components/atoms/DownloadCv";
 import SocialMedia from "@/app/components/atoms/SocialMedia";
 import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
-import { IoMdCloseCircle } from "react-icons/io";
+
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
@@ -306,7 +306,7 @@ function Contact() {
       {/* Modal */}
       {modal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 shadow-[200px]">
-          <div className="bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
+          <div className="bg-white  text-black dark:text-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
             <Image
               src="/minion.jpg"
               alt="Thank you"
