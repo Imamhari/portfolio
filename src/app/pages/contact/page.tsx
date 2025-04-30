@@ -33,6 +33,12 @@ function Contact() {
   const hasShownToast = useRef(false); // untuk mencegah toast muncul 2x
 
   useEffect(() => {
+    const img = document.createElement("img");
+    img.src = "/minion.jpg"; 
+  }, []);
+  
+
+  useEffect(() => {
     if (state.succeeded && !hasShownToast.current) {
       toast.success("Message sent successfully!");
       hasShownToast.current = true;
@@ -305,23 +311,24 @@ function Contact() {
       </div>
       {/* Modal */}
       {modal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 shadow-[200px]">
-          <div className="bg-white  text-black dark:text-white rounded-xl shadow-lg p-6 max-w-md w-full text-center">
-            <Image
-              src="/minion.jpg"
-              alt="Thank you"
-              width={400}
-              height={400}
-              className="mx-auto"
-            />
-            <button
-              onClick={() => setModal(false)}
-              className={`${robotoMono.className} px-4 py-2 rounded-lg font-bold text-white bg-red-500 hover:opacity-70`}
-            >
-              CLOSE
-            </button>
-          </div>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="bg-white text-black dark:text-white rounded-xl shadow-lg p-6 max-w-md w-full text-center transition-all duration-500 ease-out scale-100 opacity-100 animate-fadeIn">
+          <Image
+            src="/minion.jpg"
+            alt="Thank you"
+            width={400}
+            height={400}
+            className="mx-auto transition-opacity duration-700 ease-in-out opacity-100 animate-fadeImage"
+            priority 
+          />
+          <button
+            onClick={() => setModal(false)}
+            className={`${robotoMono.className} px-4 py-2 rounded-lg font-bold text-white bg-red-500 hover:opacity-70 mt-4`}
+          >
+            CLOSE
+          </button>
         </div>
+      </div>
       )}
     </section>
   );

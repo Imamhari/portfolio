@@ -38,11 +38,21 @@ const config: Config = {
             opacity: "1",
           },
         },
+        fadeIn: {
+          '0%': { opacity: "0", transform: 'scale(0.95)' },
+          '100%': { opacity: "1", transform: 'scale(1)' },
+        },
+        fadeImage: {
+          '0%': { opacity: "0" },
+          '100%': { opacity: "1" },
+        },
       },
       animation: {
         'bounce-dot-1': 'bounceDot 1.5s infinite',
         'bounce-dot-2': 'bounceDot 1.5s infinite 0.2s',
         'bounce-dot-3': 'bounceDot 1.5s infinite 0.4s',
+        fadeIn: 'fadeIn 0.4s ease-out',
+        fadeImage: 'fadeImage 0.6s ease-in-out',
       },
     },
   },
