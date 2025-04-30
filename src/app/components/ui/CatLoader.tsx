@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/catLoader.module.css";
 import { Source_Code_Pro } from "next/font/google";
+
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400", "700"],
