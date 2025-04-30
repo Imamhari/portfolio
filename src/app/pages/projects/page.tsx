@@ -139,7 +139,7 @@ function Projects() {
               animateOpacity
               scale={1}
               threshold={0.2}
-              delay={1500}
+              delay={500}
             >
               <h3
                 className={`${courierPrime.className} w-full hidden md:flex font-bold leading-tight text-[30px]`}
@@ -237,7 +237,7 @@ function Projects() {
               animateOpacity
               scale={1}
               threshold={0.2}
-              delay={1500}
+              delay={500}
             >
               <Swiper
                 spaceBetween={30}

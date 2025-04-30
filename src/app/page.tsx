@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useState } from "react";
+import CatLoader from "./components/ui/CatLoader";
 import Navbar from "./components/Navbar";
 import DarkModeToggleMobile from "./components/ui/DarkModeToggleMobile";
 import About from "./pages/about/page";
@@ -7,6 +10,20 @@ import Projects from "./pages/projects/page";
 import Skills from "./pages/skills/page";
 
 export default function Page() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+  
+  if(loading){
+    return <CatLoader />;
+  }
 
   return (
     <main>

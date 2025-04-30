@@ -59,7 +59,7 @@ function Skills() {
         duration={1000}
         easing="ease-in-out"
         initialOpacity={0}
-        delay={1000}
+        delay={500}
         className="grid grid-cols-1 xl:grid-cols-2 items- justify-center w-full  xl:mx-5 gap-10">
           <div>
             <h1

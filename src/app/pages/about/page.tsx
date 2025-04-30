@@ -69,7 +69,7 @@ function About() {
           animateOpacity
           scale={1}
           threshold={0.2}
-          delay={1000}
+          delay={500}
           
         >
           <h3
@@ -103,7 +103,7 @@ function About() {
         duration={1000}
         easing="ease-in-out"
         initialOpacity={0}
-        delay={1000}
+        delay={500}
         className="flex flex-col items-center justify-center w-full mt-10"
       >
         <div

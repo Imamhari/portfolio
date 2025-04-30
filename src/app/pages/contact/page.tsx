@@ -90,7 +90,7 @@ function Contact() {
             animateOpacity
             scale={1}
             threshold={0.2}
-            delay={1500}
+            delay={500}
             className="flex flex-col items-center justify-center 3xl:mr-[40px]"
           >
             <h3
@@ -161,7 +161,7 @@ function Contact() {
               animateOpacity
               scale={1}
               threshold={0.2}
-              delay={1500}
+              delay={500}
             >
               <h4
                 className={`${sourceCodePro.className} w-full flex text-start text-[25px] font-bold leading-tight items-center justify-center mt-5`}
