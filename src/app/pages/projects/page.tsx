@@ -257,8 +257,8 @@ function Projects() {
                             src={project.image}
                             alt="project image"
                             fill
-                            className="object-cover"
-                            priority={false}
+                            className="object-fit"
+                            priority
                           />
                         </div>
                       </div>
