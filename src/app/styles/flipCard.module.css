@@ -7,7 +7,7 @@
   height: 300px;
   transform-style: preserve-3d;
   transition: transform 0.7s ease;
-  cursor: pointer;
+  /* cursor: pointer; */
   border: 1px solid #ccc;
   box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.2), -5px -5px 10px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
@@ -81,12 +81,14 @@
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .cardbutton:hover{
-  background-color: rgb(221, 173, 17);
-  border: 1px solid #333;
+  background-color: rgb(235, 146, 12);
+  cursor: pointer;
 }
 
+.cardbutton:active{
+  transform: scale(95%);
+  transition: all 0.2s ease;
+}

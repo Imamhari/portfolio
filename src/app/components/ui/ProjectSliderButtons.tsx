@@ -10,10 +10,10 @@ function ProjectSliderButtons({ containerStyles, btnStyles, iconStyles }: {
   const swiper = useSwiper()
   return (
     <div className={containerStyles}>
-      <button className={btnStyles}>
+      <button className={`${btnStyles} active:scale-95 transition-transform duration-100`}>
         <TbArrowBigLeftLine className={iconStyles} onClick={() => swiper.slidePrev() }/>
       </button>
-      <button className={btnStyles}>
+      <button className={`${btnStyles} active:scale-95 transition-transform duration-100`}>
         <TbArrowBigRightLine className={iconStyles} onClick={() => swiper.slideNext() }/>
       </button>
     </div>
